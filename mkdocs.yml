@@ -1,0 +1,34 @@
+site_name: Quick Guide
+site_url: https://quickguide.github.io
+repo_url: https://github.com/quickshell-mirror/quickshell
+site_author: Quickguide
+
+extra_css:
+  - css/images.css
+
+theme:
+  name: shadcn
+  custom_dir: 'custom_theme/'
+  show_stargazers: true
+  show_title: true
+  show_datetime: true
+  topbar: true
+  #topbar_sections: true
+  icon: assets/qs.png
+  accent: "oklch(64.5% 0.246 16.439)"
+  pygments_style: 
+    light: shadcn-light
+    dark: github-dark
+
+use_directory_urls: true
+markdown_extensions:
+  - admonition
+  - fenced_code
+  - codehilite
+  - attr_list
+  - pymdownx.blocks.tab
+  - pymdownx.blocks.details
+  - pymdownx.blocks.caption
+  - pymdownx.tasklist
+  - toc:
+      permalink: true

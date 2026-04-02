@@ -1,0 +1,9 @@
+<nav class="items-center gap-0.5 hidden lg:flex">
+  {% set pages = config.theme.nav %}
+  {% for page in pages %}
+    <a class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all hover:bg-accent hover:text-accent-foreground h-8 rounded-md gap-1.5 px-3"
+      href="{{ page['link'] | url }}">
+      {{ page["title"] }}
+    </a>
+  {% endfor %}
+</nav>

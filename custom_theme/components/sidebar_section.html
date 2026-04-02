@@ -1,0 +1,148 @@
+{% set current = item.section if item.section else item %}
+{% set index_page = current.children
+    | selectattr("is_page")
+    | selectattr("file.name", "equalto", "index")
+    | list
+    | first %}
+
+{% set section_url = (
+    index_page.url.rstrip('/') + '/'
+    if index_page
+    else (current.abs_url.rstrip('/') + '/' if current.abs_url else None)
+) %}
+{% set is_active = section_url and current_url.startswith(section_url) %}
+
+<div 
+    x-data="{ open: {{ 'false' if collapsable and not is_active else 'true' }} }"
+    class="relative flex w-full min-w-0 flex-col p-2 rounded-md {{ 'bg-popover' if is_active and not item.no_active else '' }}"
+    data-required-link="{{ required_link if required_link else '' }}"
+>
+    {% if not item.no_title %}
+        <div
+            @click="{{ 'open = !open' if collapsable else '' }}"
+            class="ring-sidebar-ring flex h-4 shrink-0 items-center justify-between rounded-md px-2 text-xs font-medium text-muted-foreground cursor-pointer select-none"
+        >
+            <span>{{ item.title }}</span>
+
+            {% if collapsable %}
+            <svg 
+                :style="open ? 'transform: rotate(90deg)' : 'transform: rotate(0deg)'"
+                class="transition-transform duration-200 size-4"
+                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M9 5l7 7-7 7"/>
+            </svg>
+            {% endif %}
+        </div>
+    {% endif %}
+
+    {# Create Pages & Sections #}
+    {% set pages = [] %}
+    {% for page in current.children
+        | selectattr("is_page")
+        | rejectattr("meta.tb") %}
+        {% set order = 9999 %}
+        {% set show = true %}
+        {% if page.meta and page.meta.order is defined %}
+            {% set order = page.meta.order | int %}
+        {% endif %}
+        {% if page.meta and page.meta.show is defined %}
+            {% set show = page.meta.show %}
+        {% endif %}
+        {% set _ = pages.append({
+            "item": page,
+            "order": order,
+            "show": show
+        }) %}
+    {% endfor %}
+    {% set sections = [] %}
+    {% for section in current.children
+        | rejectattr("is_page")
+        | rejectattr("title", "equalto", " topbar")
+        | list %}
+        {% set collapsable = false %}
+        {% set order = 9999 %}
+        {% set title = section.title %}
+        {% set required_link = None %}
+        {% set collapsed = false %}
+        {% set no_title = false %}
+        {% set no_active = false %}
+
+        {% if section.children %}
+            {% set index_page = section.children
+                | selectattr("is_page")
+                | selectattr("file.name", "equalto", "index")
+                | list
+                | first %}
+
+            {% if index_page and index_page.meta %}
+                {% if index_page.meta.collapsable %}
+                    {% set collapsable = true %}
+                {% endif %}
+                {% if index_page.meta.title %}
+                    {% set title = index_page.meta.title %}
+                {% endif %}
+                {% if index_page.meta.order is defined %}
+                    {% set order = index_page.meta.order | int %}
+                {% endif %}
+                {% if index_page.meta.required_link %}
+                    {% set required_link = index_page.meta.required_link if index_page.meta.required_link else None %}
+                {% endif %}
+                {% if index_page.meta.collapsed %}
+                    {% set collapsed = index_page.meta.collapsed %}
+                {% endif %}
+                {% if index_page.meta.no_title %}
+                    {% set no_title = index_page.meta.no_title %}
+                {% endif %}
+                {% if index_page.meta.no_active %}
+                    {% set no_active = index_page.meta.no_active %}
+                {% endif %}
+            {% endif %}
+
+            {% set _ = sections.append({
+                "section": section,
+                "collapsable": collapsable,
+                "collapsed": collapsed,
+                "order": order,
+                "title": title,
+                "no_title": no_title,
+                "no_active": no_active,
+                "required_link": required_link
+            }) %}
+        {% endif %}
+    {% endfor %}
+
+    <div x-show="open" x-collapse>
+        <ul class="flex flex-col">
+            {# -------------------- PAGES -------------------- #}
+            {% if pages|length > 0 %}
+            <div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
+                <div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm">
+                    <ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-0.5">
+                        {% for entry in pages | sort(attribute="order") | rejectattr("show", "equalto", 'false') %}
+                            {% with sidebar_item = entry.item, current_url=current_url %}
+                            {% include "components/sidebar_item.html" %}
+                            {% endwith %}
+                        {% endfor %}
+
+                    </ul>
+                </div>
+            </div>
+            {% endif %}
+            {# -------------------- SECTIONS -------------------- #}
+            {% for entry in sections | sort(attribute="order") %}
+                {% set section = entry.section %}
+                {% set collapsable = entry.collapsable %}
+                {% set collapsed = entry.collapsed %}
+                {% set order = entry.order %}
+                {% set title = entry.title %}
+                {% set no_title = entry.no_title %}
+                {% set no_active = entry.no_active %}
+                {% set required_link = entry.required_link %}
+                {% with item = entry, current_url=current_url %}
+                {% include "components/sidebar_section.html" %}
+                {% endwith %}
+            {% endfor %}
+        </ul>
+    </div>
+</div>

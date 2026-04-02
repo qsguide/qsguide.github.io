@@ -1,0 +1,54 @@
+<div view-transition-name="sidebar" data-slot="sidebar-group" data-sidebar="group"
+    class="relative flex w-full min-w-0 flex-col p-2 no-scrollbar">
+
+        {% if nav|length > 1 %}
+
+        {% set current = nav %}
+        {% set current_url = page.url.rstrip('/') + '/' %}
+
+        {% if not current %}
+            {% set current = nav|selectattr("is_page") %}
+        {% endif %}
+
+        {% set root = {
+            "section": {
+                "children": current
+            },
+            "collapsable": false,
+            "order": 0,
+            "title": "root",
+            "no_title": true,
+            "no_active": true,
+            "required_link": None
+        } %}
+        {% with item = root, current_url = current_url %}
+            {% include "components/sidebar_section.html" %}
+        {% endwith %}
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const currentUrl = window.location.pathname;
+
+                document.querySelectorAll("[data-required-link]").forEach(el => {
+                    const required = el.getAttribute("data-required-link");
+                    const regex = new RegExp(`^${required}`);
+
+                    if (required && !currentUrl.match(regex)) {
+                        el.style.display = "none";
+                    }
+                });
+
+                document.querySelectorAll("[data-active-link]").forEach(el => {
+                    const activeLink = el.getAttribute("data-active-link");
+                    const regex = new RegExp(`^${activeLink}`);
+
+                    console.info(el, activeLink, currentUrl);
+
+                    if (activeLink && currentUrl.match(regex)) {
+                        el.setAttribute("data-active", "true");
+                    }
+                });
+            });
+        </script>
+    {% endif %}
+</div>
