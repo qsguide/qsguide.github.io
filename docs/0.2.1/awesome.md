@@ -1,8 +1,6 @@
 order: 1
 title: Awesome Quickshell
-summary: Collection of great quickshell shells
-
-!!! info "Last Update: 2nd April 2026"
+summary: <a class="button secondary" href="https://github.com/qsguide/qsguide.github.io/blob/main/docs/0.2.1/awesome.md"><small>Last Update: 2nd April 2026</small></a> Collection of great quickshell shells
 
 !!! success ""  
     <h2 style="margin-top: 0;">Featured Shells</h2>
@@ -58,10 +56,16 @@ summary: Collection of great quickshell shells
 > An Axtremely customizable shell
 <img src="https://raw.githubusercontent.com/eq-desktop/awesome-quickshell/refs/heads/main/assets/Ambxst.png" width="500">
 
-### [caelestia-shell](https://github.com/caelestia-dots/shell)
+### [Caelestia](https://github.com/caelestia-dots/shell)
 `hyprland` `material` `user-friendly`
 > A polished, modular desktop shell for Hyprland with a material-inspired aesthetic.
-<img src="https://raw.githubusercontent.com/eq-desktop/awesome-quickshell/refs/heads/main/assets/caelestia-shell.jpg" width="500">
+<img src="https://raw.githubusercontent.com/eq-desktop/awesome-quickshell/refs/heads/main/assets/caelestia-shell.png" width="500">
+<table>
+   <tr>
+       <td><img src="https://raw.githubusercontent.com/eq-desktop/awesome-quickshell/refs/heads/main/assets/caelestia-shell.png" width="225"></td>
+       <td><img src="https://raw.githubusercontent.com/eq-desktop/awesome-quickshell/refs/heads/main/assets/caelestia-shell-dark.png" width="225"></td>
+   </tr>
+</table>
 
 ### [ChromeX](https://github.com/catdeal3r/chromex)
 `niri` `material`
@@ -73,7 +77,7 @@ summary: Collection of great quickshell shells
 > A modern desktop shell for Wayland
 <img src="https://raw.githubusercontent.com/eq-desktop/awesome-quickshell/refs/heads/main/assets/DankMaterialShell.png" width="500">
 
-### [illogical-impulse](https://github.com/end-4/dots-hyprland)
+### [Illogical Impulse](https://github.com/end-4/dots-hyprland)
 `hyprland` `material` `customizable` `AI` `heavy` `user-friendly`
 > Usability-first dotfiles with a corporate-ish-level cleanliness
 <img src="https://raw.githubusercontent.com/eq-desktop/awesome-quickshell/refs/heads/main/assets/illogical-impulse.png" width="500">
@@ -93,6 +97,6 @@ summary: Collection of great quickshell shells
 > Nixos configuration feat. kurukurubar
 <img src="https://raw.githubusercontent.com/eq-desktop/awesome-quickshell/refs/heads/main/assets/Zaphkiel.jpg" width="500">
 
-## Contributing
-
-Feel free to open a PR to add new shells to [Awesome Quickshell](https://github.com/eq-desktop/awesome-quickshell).
+!!! success ""  
+    <h2 style="margin-top: 0;">Apply your own shell</h2>
+    Feel free to open a PR to add your/new shell(s) to [Awesome Quickshell](https://github.com/eq-desktop/awesome-quickshell).

@@ -11,7 +11,7 @@ theme:
   custom_dir: 'custom_theme/'
   show_stargazers: true
   show_title: true
-  show_datetime: true
+  show_datetime: false
   topbar: true
   #topbar_sections: true
   icon: assets/qs.png

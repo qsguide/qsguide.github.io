@@ -43,7 +43,5 @@ Quickshell is a relatively low-level tool compared to simple status bars like Wa
 When writing a Quickshell configuration, you are not just changing styles and layouts, but
 practically programming, which is considerably more complex.
 
-You can see the [QML Language Reference](/docs/guide/qml-language) to get an idea
+You can see the [QML Language Reference](/0.2.1/quickshell/qml-language) to get an idea
 of what you're getting into.
-> [!tip/NEXT STEPS]
-> See the [Usage Guide](/docs/guide) to learn how to set up and use Quickshell.
