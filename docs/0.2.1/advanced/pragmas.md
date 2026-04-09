@@ -49,7 +49,7 @@ Disables `QGuiApplication::setDesktopSettingsAware`. Quickshell will not read pl
 By default, Quickshell unsets `QT_STYLE_OVERRIDE` and forces `QT_QUICK_CONTROLS_STYLE=Fusion` for consistency. This pragma disables that override, allowing the system Qt style to apply.
 
 ### `Singleton`
- 
+
 ```qml
 pragma Singleton
 ```
