@@ -48,6 +48,24 @@ Disables `QGuiApplication::setDesktopSettingsAware`. Quickshell will not read pl
 
 By default, Quickshell unsets `QT_STYLE_OVERRIDE` and forces `QT_QUICK_CONTROLS_STYLE=Fusion` for consistency. This pragma disables that override, allowing the system Qt style to apply.
 
+### `Singleton`
+ 
+```qml
+pragma Singleton
+```
+ 
+Marks a QML component as a singleton. Unlike the other pragmas on this page, this uses the standard QML `pragma` keyword rather than the `//@ pragma` comment syntax. Singleton components have a single shared instance accessible across the entire shell.
+ 
+Note: `.qml.json` files are automatically treated as singletons — see [JSON Singletons](#json-singletons) below.
+
+### `Internal`
+
+```qml
+//@ pragma Internal
+```
+
+Marks a QML component as internal to its module, preventing it from being imported by files outside of that module. Useful for encapsulating implementation details that are not part of a module's public API.
+
 ### `IconTheme <name>`
 
 ```qml
@@ -107,3 +125,43 @@ Several pragmas have corresponding environment variables that serve as fallbacks
 | `AppId` | `QS_APP_ID` |
 
 When both a pragma and an environment variable are set, the pragma takes precedence (except for `IconTheme`, where the pragma overrides the env var entirely via `QIcon::setThemeName`).
+
+## JSON Singletons
+ 
+Files named `ComponentName.qml.json` are automatically synthesised into QML singleton components at scan time. No `pragma Singleton` or `//@ pragma` directives are required.
+ 
+The JSON object is converted to a `QtObject` with typed `readonly property` declarations. Type mapping is as follows:
+ 
+| JSON type | QML type |
+|---|---|
+| Object | `QtObject` (nested) |
+| Array | `var` |
+| String matching `#RGB`, `#RRGGBB`, or `#RRGGBBAA` | `color` |
+| Other string | `string` |
+| Number (whole) | `int` |
+| Number (fractional) | `real` |
+| Boolean | `bool` |
+| Null | `var` (null) |
+ 
+Example — `Theme.qml.json`:
+ 
+```json
+{
+  "accent": "#4a90d9",
+  "radius": 8,
+  "fontFamily": "Inter"
+}
+```
+ 
+This is equivalent to:
+ 
+```qml
+pragma Singleton
+import QtQuick as Q
+ 
+Q.QtObject {
+  readonly property color accent: "#4a90d9";
+  readonly property int radius: 8;
+  readonly property string fontFamily: "Inter";
+}
+```

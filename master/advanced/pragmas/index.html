@@ -1624,6 +1624,17 @@
 </code></pre>
 
 <p>Writes a temporary Fontconfig override that excludes WOFF and WOFF2 web fonts from the font list. Useful for reducing startup time and memory usage on systems with large font collections. Can also be triggered via the environment variable <code>QS_DROP_EXPENSIVE_FONTS=1</code>.</p>
+<h3 id="singleton"><code>Singleton</code><a class="headerlink" href="#singleton" title="Permanent link">&para;</a></h3>
+<pre class="codehilite"><code class="language-qml">pragma Singleton
+</code></pre>
+
+<p>Marks a QML component as a singleton. Unlike the other pragmas on this page, this uses the standard QML <code>pragma</code> keyword rather than the <code>//@ pragma</code> comment syntax. Singleton components have a single shared instance accessible across the entire shell.</p>
+<p>Note: <code>.qml.json</code> files are automatically treated as singletons — see <a href="#json-singletons">JSON Singletons</a> below.</p>
+<h3 id="internal"><code>Internal</code><a class="headerlink" href="#internal" title="Permanent link">&para;</a></h3>
+<pre class="codehilite"><code class="language-qml">//@ pragma Internal
+</code></pre>
+
+<p>Marks a QML component as internal to its module, preventing it from being imported by files outside of that module. Useful for encapsulating implementation details that are not part of a module's public API.</p>
 <h3 id="icontheme-name"><code>IconTheme &lt;name&gt;</code><a class="headerlink" href="#icontheme-name" title="Permanent link">&para;</a></h3>
 <pre class="codehilite"><code class="language-qml">//@ pragma IconTheme hicolor
 </code></pre>
@@ -1685,6 +1696,87 @@
 </tbody>
 </table></div>
 <p>When both a pragma and an environment variable are set, the pragma takes precedence (except for <code>IconTheme</code>, where the pragma overrides the env var entirely via <code>QIcon::setThemeName</code>).</p>
+<h2 id="preprocessor-directives">Preprocessor directives<a class="headerlink" href="#preprocessor-directives" title="Permanent link">&para;</a></h2>
+<p>In addition to pragmas, qs also supports a simple conditional compilation system using comment directives. These are evaluated before the QML engine sees the file — masked-out blocks are replaced with commented lines so line numbers are preserved.</p>
+<h3 id="if-expression"><code>//@ if &lt;expression&gt;</code><a class="headerlink" href="#if-expression" title="Permanent link">&para;</a></h3>
+<pre class="codehilite"><code class="language-qml">//@ if &lt;expression&gt;
+</code></pre>
+
+<p>Evaluates <code>&lt;expression&gt;</code> as JavaScript. If the result is falsy, all lines up to the matching <code>//@ endif</code> are masked (replaced with <code>// MASKED: ...</code> comments). Expressions are evaluated against a <code>PreprocEnv</code> object that exposes environment-specific values.</p>
+<p>Directives can be nested. An inner <code>//@ if</code> that passes cannot unmask lines already masked by an outer <code>//@ if</code> that failed.</p>
+<pre class="codehilite"><code class="language-qml">//@ if QS_WAYLAND
+import Quickshell.Wayland
+//@ endif
+</code></pre>
+
+<h3 id="endif"><code>//@ endif</code><a class="headerlink" href="#endif" title="Permanent link">&para;</a></h3>
+<pre class="codehilite"><code class="language-qml">//@ endif
+</code></pre>
+
+<p>Closes the most recent <code>//@ if</code> block. Every <code>//@ if</code> must have a corresponding <code>//@ endif</code>; an unclosed block or an unmatched <code>//@ endif</code> is reported as a scan error.</p>
+<h2 id="json-singletons">JSON Singletons<a class="headerlink" href="#json-singletons" title="Permanent link">&para;</a></h2>
+<p>Files named <code>ComponentName.qml.json</code> are automatically synthesised into QML singleton components at scan time. No <code>pragma Singleton</code> or <code>//@ pragma</code> directives are required.</p>
+<p>The JSON object is converted to a <code>QtObject</code> with typed <code>readonly property</code> declarations. Type mapping is as follows:</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>JSON type</th>
+<th>QML type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Object</td>
+<td><code>QtObject</code> (nested)</td>
+</tr>
+<tr>
+<td>Array</td>
+<td><code>var</code></td>
+</tr>
+<tr>
+<td>String matching <code>#RGB</code>, <code>#RRGGBB</code>, or <code>#RRGGBBAA</code></td>
+<td><code>color</code></td>
+</tr>
+<tr>
+<td>Other string</td>
+<td><code>string</code></td>
+</tr>
+<tr>
+<td>Number (whole)</td>
+<td><code>int</code></td>
+</tr>
+<tr>
+<td>Number (fractional)</td>
+<td><code>real</code></td>
+</tr>
+<tr>
+<td>Boolean</td>
+<td><code>bool</code></td>
+</tr>
+<tr>
+<td>Null</td>
+<td><code>var</code> (null)</td>
+</tr>
+</tbody>
+</table></div>
+<p>Example — <code>Theme.qml.json</code>:</p>
+<pre class="codehilite"><code class="language-json">{
+  &quot;accent&quot;: &quot;#4a90d9&quot;,
+  &quot;radius&quot;: 8,
+  &quot;fontFamily&quot;: &quot;Inter&quot;
+}
+</code></pre>
+
+<p>This is equivalent to:</p>
+<pre class="codehilite"><code class="language-qml">pragma Singleton
+import QtQuick as Q
+
+Q.QtObject {
+  readonly property color accent: &quot;#4a90d9&quot;;
+  readonly property int radius: 8;
+  readonly property string fontFamily: &quot;Inter&quot;;
+}
+</code></pre>
   </div>
   
   <script>
@@ -1957,6 +2049,18 @@
             DropExpensiveFonts
         </a>
         
+        <a href="#singleton"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="3" onClick="deferSetActiveTocLink('#singleton');">
+            Singleton
+        </a>
+        
+        <a href="#internal"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="3" onClick="deferSetActiveTocLink('#internal');">
+            Internal
+        </a>
+        
         <a href="#icontheme-name"
             class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
             data-active="false" data-depth="3" onClick="deferSetActiveTocLink('#icontheme-name');">
@@ -2006,6 +2110,36 @@
             class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
             data-active="false" data-depth="2" onClick="deferSetActiveTocLink('#environment-variable-interactions');">
             Environment variable interactions
+        </a>
+        
+
+        
+        <a href="#preprocessor-directives"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="2" onClick="deferSetActiveTocLink('#preprocessor-directives');">
+            Preprocessor directives
+        </a>
+        
+        
+        <a href="#if-expression"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="3" onClick="deferSetActiveTocLink('#if-expression');">
+            //@ if &lt;expression&gt;
+        </a>
+        
+        <a href="#endif"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="3" onClick="deferSetActiveTocLink('#endif');">
+            //@ endif
+        </a>
+        
+        
+
+        
+        <a href="#json-singletons"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="2" onClick="deferSetActiveTocLink('#json-singletons');">
+            JSON Singletons
         </a>
         
 
