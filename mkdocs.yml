@@ -4,7 +4,7 @@ repo_url: https://github.com/quickshell-mirror/quickshell
 site_author: Quickguide
 
 extra_css:
-  - css/images.css
+  - css/extra.css
 
 theme:
   name: shadcn

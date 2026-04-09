@@ -1,6 +1,7 @@
 order: 1
 author: enviction
 sidebar_title: About
+show: false
 required_link: /$
 title: About Quickguide
 

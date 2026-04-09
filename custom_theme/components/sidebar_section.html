@@ -6,16 +6,17 @@
     | first %}
 
 {% set section_url = (
-    index_page.url.rstrip('/') + '/'
+    (index_page.meta.active_link if index_page.meta.active_link else "$")
     if index_page
     else (current.abs_url.rstrip('/') + '/' if current.abs_url else None)
 ) %}
-{% set is_active = section_url and current_url.startswith(section_url) %}
 
 <div 
-    x-data="{ open: {{ 'false' if collapsable and not is_active else 'true' }} }"
-    class="relative flex w-full min-w-0 flex-col p-2 rounded-md {{ 'bg-popover' if is_active and not item.no_active else '' }}"
+    x-data="{ open: {{ (collapsed if collapsed else 'false') if collapsable else 'true' }} }"
+    x-init="$nextTick(() => { open = $el.dataset.active === 'true' ? true : open })"
+    class="relative flex w-full min-w-0 flex-col p-2 rounded-md data-[active=true]:bg-accent"
     data-required-link="{{ required_link if required_link else '' }}"
+    data-active-link="{{ section_url if section_url else '' }}"
 >
     {% if not item.no_title %}
         <div

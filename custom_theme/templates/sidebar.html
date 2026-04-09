@@ -42,7 +42,7 @@
                     const activeLink = el.getAttribute("data-active-link");
                     const regex = new RegExp(`^${activeLink}`);
 
-                    console.info(el, activeLink, currentUrl);
+                    console.info(el, activeLink, currentUrl, currentUrl.match(regex));
 
                     if (activeLink && currentUrl.match(regex)) {
                         el.setAttribute("data-active", "true");

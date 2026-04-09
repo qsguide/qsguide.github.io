@@ -1,5 +1,6 @@
-order: 1
+order: 15
 title: Awesome Quickshell
+show: false
 summary: <a class="button secondary" href="https://github.com/qsguide/qsguide.github.io/blob/main/docs/0.2.1/awesome.md"><small>Last Update: 2nd April 2026</small></a> Collection of great quickshell shells
 
 !!! success ""  
