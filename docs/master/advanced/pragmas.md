@@ -56,6 +56,24 @@ By default, Quickshell unsets `QT_STYLE_OVERRIDE` and forces `QT_QUICK_CONTROLS_
 
 Writes a temporary Fontconfig override that excludes WOFF and WOFF2 web fonts from the font list. Useful for reducing startup time and memory usage on systems with large font collections. Can also be triggered via the environment variable `QS_DROP_EXPENSIVE_FONTS=1`.
 
+### `Singleton`
+ 
+```qml
+pragma Singleton
+```
+ 
+Marks a QML component as a singleton. Unlike the other pragmas on this page, this uses the standard QML `pragma` keyword rather than the `//@ pragma` comment syntax. Singleton components have a single shared instance accessible across the entire shell.
+ 
+Note: `.qml.json` files are automatically treated as singletons — see [JSON Singletons](#json-singletons) below.
+
+### `Internal`
+
+```qml
+//@ pragma Internal
+```
+
+Marks a QML component as internal to its module, preventing it from being imported by files outside of that module. Useful for encapsulating implementation details that are not part of a module's public API.
+
 ### `IconTheme <name>`
 
 ```qml
@@ -124,3 +142,71 @@ Several pragmas have corresponding environment variables that serve as fallbacks
 | `DropExpensiveFonts` | `QS_DROP_EXPENSIVE_FONTS=1` |
 
 When both a pragma and an environment variable are set, the pragma takes precedence (except for `IconTheme`, where the pragma overrides the env var entirely via `QIcon::setThemeName`).
+
+## Preprocessor directives
+ 
+In addition to pragmas, qs also supports a simple conditional compilation system using comment directives. These are evaluated before the QML engine sees the file — masked-out blocks are replaced with commented lines so line numbers are preserved.
+ 
+### `//@ if <expression>`
+ 
+```qml
+//@ if <expression>
+```
+ 
+Evaluates `<expression>` as JavaScript. If the result is falsy, all lines up to the matching `//@ endif` are masked (replaced with `// MASKED: ...` comments). Expressions are evaluated against a `PreprocEnv` object that exposes environment-specific values.
+ 
+Directives can be nested. An inner `//@ if` that passes cannot unmask lines already masked by an outer `//@ if` that failed.
+ 
+```qml
+//@ if QS_WAYLAND
+import Quickshell.Wayland
+//@ endif
+```
+ 
+### `//@ endif`
+ 
+```qml
+//@ endif
+```
+ 
+Closes the most recent `//@ if` block. Every `//@ if` must have a corresponding `//@ endif`; an unclosed block or an unmatched `//@ endif` is reported as a scan error.
+ 
+## JSON Singletons
+ 
+Files named `ComponentName.qml.json` are automatically synthesised into QML singleton components at scan time. No `pragma Singleton` or `//@ pragma` directives are required.
+ 
+The JSON object is converted to a `QtObject` with typed `readonly property` declarations. Type mapping is as follows:
+ 
+| JSON type | QML type |
+|---|---|
+| Object | `QtObject` (nested) |
+| Array | `var` |
+| String matching `#RGB`, `#RRGGBB`, or `#RRGGBBAA` | `color` |
+| Other string | `string` |
+| Number (whole) | `int` |
+| Number (fractional) | `real` |
+| Boolean | `bool` |
+| Null | `var` (null) |
+ 
+Example — `Theme.qml.json`:
+ 
+```json
+{
+  "accent": "#4a90d9",
+  "radius": 8,
+  "fontFamily": "Inter"
+}
+```
+ 
+This is equivalent to:
+ 
+```qml
+pragma Singleton
+import QtQuick as Q
+ 
+Q.QtObject {
+  readonly property color accent: "#4a90d9";
+  readonly property int radius: 8;
+  readonly property string fontFamily: "Inter";
+}
+```
