@@ -145,7 +145,7 @@ When both a pragma and an environment variable are set, the pragma takes precede
 
 ## Preprocessor directives
  
-In addition to pragmas, qs also supports a simple conditional compilation system using comment directives. These are evaluated before the QML engine sees the file — masked-out blocks are replaced with commented lines so line numbers are preserved.
+In addition to pragmas, the scanner supports a simple conditional compilation system using comment directives. These are evaluated before the QML engine sees the file — masked-out blocks are replaced with commented lines so line numbers are preserved.
  
 ### `//@ if <expression>`
  
@@ -158,9 +158,36 @@ Evaluates `<expression>` as JavaScript. If the result is falsy, all lines up to 
 Directives can be nested. An inner `//@ if` that passes cannot unmask lines already masked by an outer `//@ if` that failed.
  
 ```qml
-//@ if QS_WAYLAND
+//@ if isEnvSet("WAYLAND_DISPLAY")
 import Quickshell.Wayland
 //@ endif
+```
+ 
+The following functions are available inside `//@ if` expressions:
+ 
+#### `env(variable: string): string`
+ 
+Returns the value of an environment variable, or an empty string if it is not set.
+ 
+```qml
+//@ if env("XDG_SESSION_TYPE") === "wayland"
+```
+ 
+#### `isEnvSet(variable: string): bool`
+ 
+Returns `true` if the given environment variable is set, regardless of its value.
+ 
+```qml
+//@ if isEnvSet("HYPRLAND_INSTANCE_SIGNATURE")
+```
+ 
+#### `hasVersion(major: int, minor: int, features?: string[]): bool`
+ 
+Returns `true` if the running Quickshell build meets the given version requirement. An optional list of feature strings can be passed to additionally require that specific build-time features are enabled.
+ 
+```qml
+//@ if hasVersion(0, 2)
+//@ if hasVersion(0, 2, ["wayland", "hyprland"])
 ```
  
 ### `//@ endif`
@@ -171,6 +198,7 @@ import Quickshell.Wayland
  
 Closes the most recent `//@ if` block. Every `//@ if` must have a corresponding `//@ endif`; an unclosed block or an unmatched `//@ endif` is reported as a scan error.
  
+
 ## JSON Singletons
  
 Files named `ComponentName.qml.json` are automatically synthesised into QML singleton components at scan time. No `pragma Singleton` or `//@ pragma` directives are required.

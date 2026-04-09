@@ -1697,16 +1697,33 @@
 </table></div>
 <p>When both a pragma and an environment variable are set, the pragma takes precedence (except for <code>IconTheme</code>, where the pragma overrides the env var entirely via <code>QIcon::setThemeName</code>).</p>
 <h2 id="preprocessor-directives">Preprocessor directives<a class="headerlink" href="#preprocessor-directives" title="Permanent link">&para;</a></h2>
-<p>In addition to pragmas, qs also supports a simple conditional compilation system using comment directives. These are evaluated before the QML engine sees the file — masked-out blocks are replaced with commented lines so line numbers are preserved.</p>
+<p>In addition to pragmas, the scanner supports a simple conditional compilation system using comment directives. These are evaluated before the QML engine sees the file — masked-out blocks are replaced with commented lines so line numbers are preserved.</p>
 <h3 id="if-expression"><code>//@ if &lt;expression&gt;</code><a class="headerlink" href="#if-expression" title="Permanent link">&para;</a></h3>
 <pre class="codehilite"><code class="language-qml">//@ if &lt;expression&gt;
 </code></pre>
 
 <p>Evaluates <code>&lt;expression&gt;</code> as JavaScript. If the result is falsy, all lines up to the matching <code>//@ endif</code> are masked (replaced with <code>// MASKED: ...</code> comments). Expressions are evaluated against a <code>PreprocEnv</code> object that exposes environment-specific values.</p>
 <p>Directives can be nested. An inner <code>//@ if</code> that passes cannot unmask lines already masked by an outer <code>//@ if</code> that failed.</p>
-<pre class="codehilite"><code class="language-qml">//@ if QS_WAYLAND
+<pre class="codehilite"><code class="language-qml">//@ if isEnvSet(&quot;WAYLAND_DISPLAY&quot;)
 import Quickshell.Wayland
 //@ endif
+</code></pre>
+
+<p>The following functions are available inside <code>//@ if</code> expressions:</p>
+<h4 id="envvariable-string-string"><code>env(variable: string): string</code><a class="headerlink" href="#envvariable-string-string" title="Permanent link">&para;</a></h4>
+<p>Returns the value of an environment variable, or an empty string if it is not set.</p>
+<pre class="codehilite"><code class="language-qml">//@ if env(&quot;XDG_SESSION_TYPE&quot;) === &quot;wayland&quot;
+</code></pre>
+
+<h4 id="isenvsetvariable-string-bool"><code>isEnvSet(variable: string): bool</code><a class="headerlink" href="#isenvsetvariable-string-bool" title="Permanent link">&para;</a></h4>
+<p>Returns <code>true</code> if the given environment variable is set, regardless of its value.</p>
+<pre class="codehilite"><code class="language-qml">//@ if isEnvSet(&quot;HYPRLAND_INSTANCE_SIGNATURE&quot;)
+</code></pre>
+
+<h4 id="hasversionmajor-int-minor-int-features-string-bool"><code>hasVersion(major: int, minor: int, features?: string[]): bool</code><a class="headerlink" href="#hasversionmajor-int-minor-int-features-string-bool" title="Permanent link">&para;</a></h4>
+<p>Returns <code>true</code> if the running Quickshell build meets the given version requirement. An optional list of feature strings can be passed to additionally require that specific build-time features are enabled.</p>
+<pre class="codehilite"><code class="language-qml">//@ if hasVersion(0, 2)
+//@ if hasVersion(0, 2, [&quot;wayland&quot;, &quot;hyprland&quot;])
 </code></pre>
 
 <h3 id="endif"><code>//@ endif</code><a class="headerlink" href="#endif" title="Permanent link">&para;</a></h3>
