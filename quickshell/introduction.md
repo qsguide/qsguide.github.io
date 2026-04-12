@@ -19,8 +19,8 @@ A specific configuration can be picked using the `--config` or `-c` argument to 
 Configs located at other paths outside XDG standard, including raw qml files,  
 can be run with `--path` or `-p`.
 
-!!! warning ""  
-    **Caution**  
+!!! warning ""
+    <p style="font-size: 1.3em">+lucide:badge-alert+ Caution </p></br>
     Many users use root imports, in the form `import "root:/path/to/module"`. These are an old  
     Quickshell feature that will break the LSP and singletons. Keep that in mind if you decide  
     to use them.  
@@ -69,7 +69,7 @@ Now that we have a piece of text, what if it did something useful?
 To start with, let's make a clock. To get the time, we'll use the `date` command.
 
 !!! note ""
-    **Note**  
+    <p style="font-size: 1.3em">+lucide:badge-info+ Note </p></br>
     Quickshell can do more than just run processes. Read until the end for more information.
 
 We can use a [Process](https://quickshell.org/docs/v0.2.1/guide/types/Quickshell.Io/Process) object to run commands
@@ -80,7 +80,7 @@ a [signal handler](/0.2.1/quickshell/qml-language#signal-handlers)
 to update the text on the clock.
 
 !!! note ""
-    **Note**
+    <p style="font-size: 1.3em">+lucide:badge-info+ Note </p></br>
     Quickshell live-reloads your code. You can leave it open and edit the
     original file. The panel will reload when you save it.
 
@@ -251,6 +251,7 @@ Variants {
 ```
 
 !!! note ""
+    <p style="font-size: 1.3em">+lucide:badge-info+ Note </p></br>
     See also: [Property Bindings](/0.2.1/quickshell/qml-language#property-bindings),
     [Array.map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
 
@@ -264,7 +265,7 @@ bar less efficient than it could be. We can fix this by moving the
 Process and Timer outside of the window using Scope.
 
 !!! danger ""
-    **Caution/Error**  
+    <p style="font-size: 1.3em">+lucide:badge-alert+ Caution </p></br>
     This code will not work correctly.
 
 ```qml
@@ -532,6 +533,7 @@ Scope {
 ```
 
 !!! note ""
+    <p style="font-size: 1.3em">+lucide:badge-info+ Note </p></br>
     See also: [Scope](https://quickshell.org/docs/master/types/Quickshell/Scope/)
 
 Any qml file that starts with an uppercase letter can be referenced this way.

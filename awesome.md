@@ -3,16 +3,16 @@ title: Awesome Quickshell
 show: false
 summary: <a class="button secondary" href="https://github.com/qsguide/qsguide.github.io/blob/main/docs/0.2.1/awesome.md"><small>Last Update: 2nd April 2026</small></a> Collection of great quickshell shells
 
-!!! success ""  
-    <h2 style="margin-top: 0;">Featured Shells</h2>
+!!! success ""
+    <p style="font-size: 1.6em">+lucide:crown+ Featured shells </p></br>
 
     1. [DankMaterialShell](#dankmaterialshell) – Very professional shell
     2. [Ambxst](#ambxst) – Impressive customization
     3. [Noctalia Shell](#noctalia-shell) – Very user-friendly shell
 
-!!! warning ""  
-    <h2 style="margin-top: 0;">Legend</h2>
-
+!!! warning ""
+    <p style="font-size: 1.3em">+lucide:map+ Legend </p></br>
+    
     - `hyprland`, `sway`, `niri`, `...` – target platform
     - `material` – follows Material Design
     - `apple` – follows Apple Design
@@ -98,6 +98,6 @@ summary: <a class="button secondary" href="https://github.com/qsguide/qsguide.gi
 > Nixos configuration feat. kurukurubar
 <img src="https://raw.githubusercontent.com/eq-desktop/awesome-quickshell/refs/heads/main/assets/Zaphkiel.jpg" width="500">
 
-!!! success ""  
-    <h2 style="margin-top: 0;">Apply your own shell</h2>
+!!! success ""
+    <p style="font-size: 1.3em">+lucide:cross+ Apply your own shell</p></br>
     Feel free to open a PR to add your/new shell(s) to [Awesome Quickshell](https://github.com/eq-desktop/awesome-quickshell).

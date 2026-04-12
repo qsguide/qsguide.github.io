@@ -63,8 +63,10 @@ pragma Singleton
 ```
  
 Marks a QML component as a singleton. Unlike the other pragmas on this page, this uses the standard QML `pragma` keyword rather than the `//@ pragma` comment syntax. Singleton components have a single shared instance accessible across the entire shell.
- 
-Note: `.qml.json` files are automatically treated as singletons — see [JSON Singletons](#json-singletons) below.
+
+!!! note ""
+    <p style="font-size: 1.3em">+lucide:badge-info+ Note </p></br>
+    `.qml.json` files are automatically treated as singletons — see [JSON Singletons](#json-singletons) below.
 
 ### `Internal`
 

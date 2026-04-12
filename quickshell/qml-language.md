@@ -5,6 +5,7 @@ Quickshell is configured using the Qt Modeling Language, or QML.
 This page explains what you need to know about QML to start using Quickshell.
 
 !!! note ""
+    <p style="font-size: 1.3em">+lucide:badge-info+ Note </p></br>
     See also: [Qt Documentation: QML Tutorial](https://doc.qt.io/qt-6/qml-tutorial.html)
 
 ## Structure
@@ -13,7 +14,7 @@ Below is a QML document showing most of the syntax.
 Keep it in mind as you read the detailed descriptions below.
 
 !!! note ""
-    **Note**
+    <p style="font-size: 1.3em">+lucide:badge-info+ Note </p></br>
     
     - Semicolons are permitted basically everywhere, and recommended in
       functions and expressions.
@@ -127,7 +128,7 @@ subfolders, e.g. `qs.foo.bar`.
 - `Namepsace` is an optional namespace to import types from the module under.
 
 !!! success ""
-    **Tip**  
+    <p style="font-size: 1.3em">+lucide:heart+ Tip </p></br>
     Quickshell module imports are preferable to relative path imports as they are much more LSP friendly.
 
 A javascript import statement looks like this:
@@ -141,7 +142,7 @@ import "<filename>" as <Namespace>
   file will be made available under.
 
 !!! info ""
-    **Note**  
+    <p style="font-size: 1.3em">+lucide:badge+ Info </p></br>
     All _Module_ and _Namespace_ names must start with an uppercase letter.  
     Attempting to use a lowercase namespace will result in an error.
 
@@ -188,7 +189,7 @@ Name {
 
 Every object can contain [properties](#properties), [functions](#functions),
 and [signals](#signals). You can find out what properties are available for a type
-by looking it up in the [Type Reference](@docs/types/).
+by looking it up in the [Type Reference](https://quickshell.org/docs/master/types/).
 
 ### Properties
 
@@ -382,6 +383,7 @@ Item {
 }
 ```
 !!! note ""
+    <p style="font-size: 1.3em">+lucide:badge-info+ Note </p></br>
     See also: [Qt Documentation: Scope and Naming Resolution](https://doc.qt.io/qt-6/qtqml-documents-scope.html)
 
 ### Functions
@@ -492,6 +494,7 @@ They can be declared everywhere [properties](#properties) and [functions](#funct
 can, and follow the same [scoping rules](#property-access-scopes).
 
 !!! note ""
+    <p style="font-size: 1.3em">+lucide:badge-info+ Note </p></br>
     See also: [Qt Documentation: Signal and Handler Event System](https://doc.qt.io/qt-6/qtqml-syntax-signals.html)
 
 ### Signal definitions
@@ -791,6 +794,7 @@ files.
 This section assumes knowledge of: [Properties](#properties), [Signals](#signals),
 and [Functions](#functions).
 !!! note ""
+    <p style="font-size: 1.3em">+lucide:badge-info+ Note </p></br>
     See also the [Qt documentation](https://doc.qt.io/qt-6/qtqml-syntax-propertybinding.html).
 
 Reactivity is when a property is updated based on updates to another property.

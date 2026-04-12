@@ -1,6 +1,15 @@
 title: Pragmas
 order: 1
 
+
+```mermaid
+graph LR
+    hello --> world
+    world --> again
+    again --> hello
+```
+
+
 # Pragmas
 
 Pragmas are special directives embedded as comments at the top of a Quickshell config file. They are read by the launcher before the QML engine initialises and allow you to control low-level runtime behaviour — application identity, environment variables, directory overrides, rendering options, and more.
@@ -55,8 +64,10 @@ pragma Singleton
 ```
  
 Marks a QML component as a singleton. Unlike the other pragmas on this page, this uses the standard QML `pragma` keyword rather than the `//@ pragma` comment syntax. Singleton components have a single shared instance accessible across the entire shell.
- 
-Note: `.qml.json` files are automatically treated as singletons — see [JSON Singletons](#json-singletons) below.
+
+!!! note ""
+    <p style="font-size: 1.3em">+lucide:badge-info+ Note </p></br>
+    `.qml.json` files are automatically treated as singletons — see [JSON Singletons](#json-singletons) below.
 
 ### `Internal`
 

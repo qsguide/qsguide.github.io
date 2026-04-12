@@ -2,78 +2,94 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://quickguide.github.io/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://quickguide.github.io/about/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://quickguide.github.io/awesome/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://quickguide.github.io/getting-started/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://quickguide.github.io/0.2.1/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-12</lastmod>
+    </url>
+    <url>
+         <loc>https://quickguide.github.io/0.2.1/advanced/debugging-and-performance/</loc>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://quickguide.github.io/0.2.1/advanced/pragmas/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://quickguide.github.io/advanced/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-12</lastmod>
+    </url>
+    <url>
+         <loc>https://quickguide.github.io/advanced/debugging-and-performance2.1/</loc>
+         <lastmod>2026-04-12</lastmod>
+    </url>
+    <url>
+         <loc>https://quickguide.github.io/advanced/debugging-and-performancemaster/</loc>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://quickguide.github.io/advanced/pragmas2.1/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://quickguide.github.io/advanced/pragmasmaster/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://quickguide.github.io/bottom/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://quickguide.github.io/bottom/awesome/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://quickguide.github.io/master/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-12</lastmod>
+    </url>
+    <url>
+         <loc>https://quickguide.github.io/master/advanced/debugging-and-performance/</loc>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://quickguide.github.io/master/advanced/pragmas/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://quickguide.github.io/quickshell/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://quickguide.github.io/quickshell/introduction/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://quickguide.github.io/quickshell/qml-language/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://quickguide.github.io/versions/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://quickguide.github.io/versions/0.2.1/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://quickguide.github.io/versions/master/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
 </urlset>

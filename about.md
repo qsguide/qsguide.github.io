@@ -10,6 +10,7 @@ description language. It provides integrations for common shell functionality,
 as well as support for hot reloading and tools to work with processes,
 sockets, files, and more.
 
+
 Built-in integrations are currently provided for:
 
 - Wayland and X11 for windowing
@@ -35,7 +36,7 @@ There are many setups intended to be useful without much tweaking, for example:
 - [Aureli](https://github.com/eq-desktop/eqsh) by Eq Desktop
 
 !!! success ""
-    **Tip: Want more preconfigured desktops?**  
+    <p style="font-size: 1.3em">+lucide:paintbrush+ **Want more preconfigured desktops?**   </p></br>
     Take a look at the [Awesome Quickshell Project](https://github.com/eq-desktop/awesome-quickshell)  
 
 #### I want to make my own
