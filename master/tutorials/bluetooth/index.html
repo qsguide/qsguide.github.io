@@ -1774,7 +1774,7 @@
     x-init="$nextTick(() => { open = $el.dataset.active === 'true' ? true : open })"
     class="relative flex w-full min-w-0 flex-col p-2 rounded-md data-[active=true]:bg-accent"
     style="padding-left: 0px;"
-    data-required-link="^\/(master(?:\/.*)?)$"
+    data-required-link="^\/(?!(0\.2\.1|0\.3\.0)(?:\/|$)).*$(master(?:\/.*)?|.*)$"
     data-active-link="$"
 >
     
@@ -4138,7 +4138,7 @@
     x-init="$nextTick(() => { open = $el.dataset.active === 'true' ? true : open })"
     class="relative flex w-full min-w-0 flex-col p-2 rounded-md data-[active=true]:bg-accent"
     style="padding-left: 0px;"
-    data-required-link="^\/(master(?:\/.*)?)$"
+    data-required-link="^\/(?!(0\.2\.1|0\.3\.0)(?:\/|$)).*$(master(?:\/.*)?|.*)$"
     data-active-link="$"
 >
     
