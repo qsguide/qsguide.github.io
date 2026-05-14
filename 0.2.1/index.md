@@ -1,3 +1,4 @@
-required_link: /never
-order: 1
-title: 0.2.1
+required_link: ^\/0\.2\.1.*$
+show: false
+no_title: true
+padding: 0

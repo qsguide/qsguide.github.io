@@ -1,17 +1,6 @@
 title: Pragmas
 order: 1
 
-
-```mermaid
-graph LR
-    hello --> world
-    world --> again
-    again --> hello
-```
-
-
-# Pragmas
-
 Pragmas are special directives embedded as comments at the top of a Quickshell config file. They are read by the launcher before the QML engine initialises and allow you to control low-level runtime behaviour — application identity, environment variables, directory overrides, rendering options, and more.
 
 A pragma line takes the form:

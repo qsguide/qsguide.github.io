@@ -2,94 +2,166 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://quickguide.github.io/</loc>
-         <lastmod>2026-04-12</lastmod>
+         <lastmod>2026-05-14</lastmod>
     </url>
     <url>
          <loc>https://quickguide.github.io/about/</loc>
-         <lastmod>2026-04-12</lastmod>
+         <lastmod>2026-05-14</lastmod>
     </url>
     <url>
          <loc>https://quickguide.github.io/awesome/</loc>
-         <lastmod>2026-04-12</lastmod>
+         <lastmod>2026-05-14</lastmod>
     </url>
     <url>
          <loc>https://quickguide.github.io/getting-started/</loc>
-         <lastmod>2026-04-12</lastmod>
+         <lastmod>2026-05-14</lastmod>
+    </url>
+    <url>
+         <loc>https://quickguide.github.io/style-guide/</loc>
+         <lastmod>2026-05-14</lastmod>
     </url>
     <url>
          <loc>https://quickguide.github.io/0.2.1/</loc>
-         <lastmod>2026-04-12</lastmod>
+         <lastmod>2026-05-14</lastmod>
     </url>
     <url>
          <loc>https://quickguide.github.io/0.2.1/advanced/debugging-and-performance/</loc>
-         <lastmod>2026-04-12</lastmod>
+         <lastmod>2026-05-14</lastmod>
     </url>
     <url>
          <loc>https://quickguide.github.io/0.2.1/advanced/pragmas/</loc>
-         <lastmod>2026-04-12</lastmod>
+         <lastmod>2026-05-14</lastmod>
     </url>
     <url>
-         <loc>https://quickguide.github.io/advanced/</loc>
-         <lastmod>2026-04-12</lastmod>
+         <loc>https://quickguide.github.io/0.3.0/</loc>
+         <lastmod>2026-05-14</lastmod>
     </url>
     <url>
-         <loc>https://quickguide.github.io/advanced/debugging-and-performance2.1/</loc>
-         <lastmod>2026-04-12</lastmod>
+         <loc>https://quickguide.github.io/0.3.0/advanced/debugging-and-performance/</loc>
+         <lastmod>2026-05-14</lastmod>
     </url>
     <url>
-         <loc>https://quickguide.github.io/advanced/debugging-and-performancemaster/</loc>
-         <lastmod>2026-04-12</lastmod>
+         <loc>https://quickguide.github.io/0.3.0/advanced/env-variables/</loc>
+         <lastmod>2026-05-14</lastmod>
     </url>
     <url>
-         <loc>https://quickguide.github.io/advanced/pragmas2.1/</loc>
-         <lastmod>2026-04-12</lastmod>
+         <loc>https://quickguide.github.io/0.3.0/advanced/pragmas/</loc>
+         <lastmod>2026-05-14</lastmod>
     </url>
     <url>
-         <loc>https://quickguide.github.io/advanced/pragmasmaster/</loc>
-         <lastmod>2026-04-12</lastmod>
+         <loc>https://quickguide.github.io/0.3.0/tutorials/bluetooth/</loc>
+         <lastmod>2026-05-14</lastmod>
+    </url>
+    <url>
+         <loc>https://quickguide.github.io/0.3.0/tutorials/config/</loc>
+         <lastmod>2026-05-14</lastmod>
+    </url>
+    <url>
+         <loc>https://quickguide.github.io/0.3.0/tutorials/display-manager/</loc>
+         <lastmod>2026-05-14</lastmod>
+    </url>
+    <url>
+         <loc>https://quickguide.github.io/0.3.0/tutorials/lockscreen/</loc>
+         <lastmod>2026-05-14</lastmod>
+    </url>
+    <url>
+         <loc>https://quickguide.github.io/0.3.0/tutorials/notifications/</loc>
+         <lastmod>2026-05-14</lastmod>
+    </url>
+    <url>
+         <loc>https://quickguide.github.io/0.3.0/tutorials/simple-bar/</loc>
+         <lastmod>2026-05-14</lastmod>
+    </url>
+    <url>
+         <loc>https://quickguide.github.io/0.3.0/tutorials/wallpaper/</loc>
+         <lastmod>2026-05-14</lastmod>
+    </url>
+    <url>
+         <loc>https://quickguide.github.io/0.3.0/tutorials/wifi/</loc>
+         <lastmod>2026-05-14</lastmod>
     </url>
     <url>
          <loc>https://quickguide.github.io/bottom/</loc>
-         <lastmod>2026-04-12</lastmod>
+         <lastmod>2026-05-14</lastmod>
     </url>
     <url>
          <loc>https://quickguide.github.io/bottom/awesome/</loc>
-         <lastmod>2026-04-12</lastmod>
+         <lastmod>2026-05-14</lastmod>
     </url>
     <url>
          <loc>https://quickguide.github.io/master/</loc>
-         <lastmod>2026-04-12</lastmod>
+         <lastmod>2026-05-14</lastmod>
     </url>
     <url>
          <loc>https://quickguide.github.io/master/advanced/debugging-and-performance/</loc>
-         <lastmod>2026-04-12</lastmod>
+         <lastmod>2026-05-14</lastmod>
+    </url>
+    <url>
+         <loc>https://quickguide.github.io/master/advanced/env-variable/</loc>
+         <lastmod>2026-05-14</lastmod>
     </url>
     <url>
          <loc>https://quickguide.github.io/master/advanced/pragmas/</loc>
-         <lastmod>2026-04-12</lastmod>
+         <lastmod>2026-05-14</lastmod>
+    </url>
+    <url>
+         <loc>https://quickguide.github.io/master/tutorials/bluetooth/</loc>
+         <lastmod>2026-05-14</lastmod>
+    </url>
+    <url>
+         <loc>https://quickguide.github.io/master/tutorials/config/</loc>
+         <lastmod>2026-05-14</lastmod>
+    </url>
+    <url>
+         <loc>https://quickguide.github.io/master/tutorials/display-manager/</loc>
+         <lastmod>2026-05-14</lastmod>
+    </url>
+    <url>
+         <loc>https://quickguide.github.io/master/tutorials/lockscreen/</loc>
+         <lastmod>2026-05-14</lastmod>
+    </url>
+    <url>
+         <loc>https://quickguide.github.io/master/tutorials/notifications/</loc>
+         <lastmod>2026-05-14</lastmod>
+    </url>
+    <url>
+         <loc>https://quickguide.github.io/master/tutorials/simple-bar/</loc>
+         <lastmod>2026-05-14</lastmod>
+    </url>
+    <url>
+         <loc>https://quickguide.github.io/master/tutorials/wallpaper/</loc>
+         <lastmod>2026-05-14</lastmod>
+    </url>
+    <url>
+         <loc>https://quickguide.github.io/master/tutorials/wifi/</loc>
+         <lastmod>2026-05-14</lastmod>
     </url>
     <url>
          <loc>https://quickguide.github.io/quickshell/</loc>
-         <lastmod>2026-04-12</lastmod>
+         <lastmod>2026-05-14</lastmod>
     </url>
     <url>
          <loc>https://quickguide.github.io/quickshell/introduction/</loc>
-         <lastmod>2026-04-12</lastmod>
+         <lastmod>2026-05-14</lastmod>
     </url>
     <url>
          <loc>https://quickguide.github.io/quickshell/qml-language/</loc>
-         <lastmod>2026-04-12</lastmod>
+         <lastmod>2026-05-14</lastmod>
     </url>
     <url>
          <loc>https://quickguide.github.io/versions/</loc>
-         <lastmod>2026-04-12</lastmod>
+         <lastmod>2026-05-14</lastmod>
     </url>
     <url>
          <loc>https://quickguide.github.io/versions/0.2.1/</loc>
-         <lastmod>2026-04-12</lastmod>
+         <lastmod>2026-05-14</lastmod>
+    </url>
+    <url>
+         <loc>https://quickguide.github.io/versions/0.3.0/</loc>
+         <lastmod>2026-05-14</lastmod>
     </url>
     <url>
          <loc>https://quickguide.github.io/versions/master/</loc>
-         <lastmod>2026-04-12</lastmod>
+         <lastmod>2026-05-14</lastmod>
     </url>
 </urlset>

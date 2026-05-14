@@ -36,11 +36,11 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>0.2.1 - Quick Guide</title>
+    <title>Index - Quick Guide</title>
     
 
 
-<title>0.2.1</title>
+<title>Index</title>
 
 
 
@@ -57,7 +57,7 @@
 
 <!-- Open Graph (Facebook, LinkedIn) -->
 
-<meta property="og:title" content="0.2.1">
+<meta property="og:title" content="Index">
 
 
 
@@ -72,7 +72,7 @@
 
 <!-- Twitter Card -->
 
-<meta name="twitter:title" content="0.2.1">
+<meta name="twitter:title" content="Index">
 
 
 
@@ -86,6 +86,7 @@
     <link rel="icon" href="../img/favicon.ico">
 
     <link href="../css/base.css" rel="stylesheet">
+    <link href="../css/ext.css" rel="stylesheet">
     <link href="../css/geist.css" rel="stylesheet">
 
     
@@ -99,8 +100,6 @@
 
 
     
-    <link href="../css/neoteroi-mkdocs.css" rel="stylesheet">
-    <link href="../css/extra.css" rel="stylesheet">
 
     
 
@@ -146,7 +145,7 @@
                 <span class="size-8 flex flex-row justify-center items-center">
                     
 
-<img class="size-5" src="../assets/qs.png" alt="icon">
+<img class="size-5" src="../qs.png" alt="icon">
 
 
                 </span>
@@ -256,12 +255,12 @@
                 <div data-slot="sidebar-wrapper" style="--sidebar-width: 16rem; --sidebar-width-icon: 3rem;"
                     class="group/sidebar-wrapper has-data-[variant=inset]:bg-sidebar flex w-full 3xl:fixed:container 3xl:fixed:px-3 min-h-min flex-1 items-start px-0 [--sidebar-width:220px] [--top-spacing:0] lg:grid lg:grid-cols-[var(--sidebar-width)_minmax(0,1fr)] lg:[--sidebar-width:240px] lg:[--top-spacing:calc(var(--spacing)*4)]">
                     <div data-slot="sidebar"
-                        class="text-sidebar-foreground w-(--sidebar-width) flex-col sticky top-[calc(var(--header-height)+1px)] z-30 hidden h-[calc(100svh-var(--header-height)-var(--footer-height))] bg-transparent lg:flex">
+                        class="text-sidebar-foreground w-(--sidebar-width) flex-col sticky top-[calc(var(--header-height)+1px)] z-30 hidden h-[calc(100svh-var(--header-height))] bg-transparent lg:flex">
                         <div data-slot="sidebar-content" data-sidebar="content"
                             class="flex min-h-0 flex-1 flex-col gap-2 overflow-auto group-data-[collapsible=icon]:overflow-hidden no-scrollbar px-2 pb-12">
                             <div class="h-(--top-spacing) shrink-0"></div>
                             <div view-transition-name="sidebar" data-slot="sidebar-group" data-sidebar="group"
-    class="relative flex w-full min-w-0 flex-col p-2 no-scrollbar">
+    class="relative flex w-full h-full min-w-0 flex-col p-2 no-scrollbar">
 
         
 
@@ -277,10 +276,16 @@
 
 
 
+
+
+    
+
+
 <div 
     x-data="{ open: true }"
     x-init="$nextTick(() => { open = $el.dataset.active === 'true' ? true : open })"
     class="relative flex w-full min-w-0 flex-col p-2 rounded-md data-[active=true]:bg-accent"
+    style="padding-left: px;"
     data-required-link=""
     data-active-link="$"
 >
@@ -325,37 +330,17 @@
         
         
     
+        
+        
+        
+            
+        
+        
+            
+        
+        
     
     
-        
-        
-        
-        
-        
-        
-        
-
-        
-            
-
-            
-                
-                
-                    
-                
-                
-                    
-                
-                
-                    
-                
-                
-                
-                
-            
-
-            
-        
     
         
         
@@ -370,7 +355,6 @@
 
             
                 
-                    
                 
                 
                     
@@ -380,6 +364,7 @@
                 
                 
                 
+                    
                 
                 
             
@@ -405,6 +390,8 @@
                     
                 
                 
+                    
+                
                 
                 
                     
@@ -429,15 +416,43 @@
             
                 
                 
+                
+                    
+                
+                
+                
+                
+                    
+                
+                
+            
+
+            
+        
+    
+        
+        
+        
+        
+        
+        
+        
+
+        
+            
+
+            
+                
+                
+                
                     
                 
                 
                     
                 
                 
+                
                     
-                
-                
                 
                 
             
@@ -585,10 +600,16 @@
 
 
 
+
+
+    
+
+
 <div 
     x-data="{ open: false }"
     x-init="$nextTick(() => { open = $el.dataset.active === 'true' ? true : open })"
     class="relative flex w-full min-w-0 flex-col p-2 rounded-md data-[active=true]:bg-accent"
+    style="padding-left: px;"
     data-required-link=""
     data-active-link="$"
 >
@@ -640,6 +661,14 @@
         
         
     
+        
+        
+        
+            
+        
+        
+        
+    
     
     
 
@@ -662,10 +691,36 @@
         data-slot="sidebar-menu-button"
         data-active-link="/master/"
         data-sidebar="menu-button"
-        data-size="default" href="/master/"
+        data-size="default" href="/master/advanced/pragmas/"
         class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
         
         Master
+        
+
+        
+
+        
+
+        
+    </a>
+</li>
+                            
+                        
+                            
+                            
+<li
+    data-slot="sidebar-menu-item"
+    data-required-link=""
+    data-sidebar="menu-item"
+    class="group/menu-item relative h-[30px]">
+    <a
+        data-slot="sidebar-menu-button"
+        data-active-link="/0.3.0/"
+        data-sidebar="menu-button"
+        data-size="default" href="/0.3.0/advanced/pragmas/"
+        class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
+        
+        0.3.0
         
 
         
@@ -688,239 +743,10 @@
         data-slot="sidebar-menu-button"
         data-active-link="/0.2.1/"
         data-sidebar="menu-button"
-        data-size="default" href="/0.2.1/"
-        class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
-        
-        0.2.1
-        
-
-        
-
-        
-
-        
-    </a>
-</li>
-                            
-                        
-
-                    </ul>
-                </div>
-            </div>
-            
-            
-            
-        </ul>
-    </div>
-</div>
-                
-            
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-
-
-
-
-<div 
-    x-data="{ open: true }"
-    x-init="$nextTick(() => { open = $el.dataset.active === 'true' ? true : open })"
-    class="relative flex w-full min-w-0 flex-col p-2 rounded-md data-[active=true]:bg-accent"
-    data-required-link="/never"
-    data-active-link="$"
->
-    
-        <div
-            @click=""
-            class="ring-sidebar-ring flex h-4 shrink-0 items-center justify-between rounded-md px-2 text-xs font-medium text-muted-foreground cursor-pointer select-none"
-        >
-            <span>0.2.1</span>
-
-            
-        </div>
-    
-
-    
-    
-    
-        
-        
-        
-            
-        
-        
-        
-    
-    
-    
-        
-        
-        
-        
-        
-        
-        
-
-        
-            
-
-            
-
-            
-        
-    
-
-    <div x-show="open" x-collapse>
-        <ul class="flex flex-col">
-            
-            
-            <div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
-                <div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm">
-                    <ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-0.5">
-                        
-                            
-                            
-<li
-    data-slot="sidebar-menu-item"
-    data-required-link="/never"
-    data-sidebar="menu-item"
-    class="group/menu-item relative h-[30px]">
-    <a
-        data-slot="sidebar-menu-button"
-        data-active-link=""
-        data-sidebar="menu-button"
-        data-size="default" href="/0.2.1/"
-        class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
-        
-        0.2.1
-        
-
-        
-
-        
-
-        
-    </a>
-</li>
-                            
-                        
-
-                    </ul>
-                </div>
-            </div>
-            
-            
-            
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-
-
-
-
-<div 
-    x-data="{ open: true }"
-    x-init="$nextTick(() => { open = $el.dataset.active === 'true' ? true : open })"
-    class="relative flex w-full min-w-0 flex-col p-2 rounded-md data-[active=true]:bg-accent"
-    data-required-link=""
-    data-active-link=""
->
-    
-        <div
-            @click=""
-            class="ring-sidebar-ring flex h-4 shrink-0 items-center justify-between rounded-md px-2 text-xs font-medium text-muted-foreground cursor-pointer select-none"
-        >
-            <span>Advanced</span>
-
-            
-        </div>
-    
-
-    
-    
-    
-        
-        
-        
-            
-        
-        
-        
-    
-        
-        
-        
-            
-        
-        
-        
-    
-    
-    
-
-    <div x-show="open" x-collapse>
-        <ul class="flex flex-col">
-            
-            
-            <div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
-                <div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm">
-                    <ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-0.5">
-                        
-                            
-                            
-<li
-    data-slot="sidebar-menu-item"
-    data-required-link=""
-    data-sidebar="menu-item"
-    class="group/menu-item relative h-[30px]">
-    <a
-        data-slot="sidebar-menu-button"
-        data-active-link=""
-        data-sidebar="menu-button"
         data-size="default" href="/0.2.1/advanced/pragmas/"
         class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
         
-        Pragmas
-        
-
-        
-
-        
-
-        
-    </a>
-</li>
-                            
-                        
-                            
-                            
-<li
-    data-slot="sidebar-menu-item"
-    data-required-link=""
-    data-sidebar="menu-item"
-    class="group/menu-item relative h-[30px]">
-    <a
-        data-slot="sidebar-menu-button"
-        data-active-link=""
-        data-sidebar="menu-button"
-        data-size="default" href="/0.2.1/advanced/debugging-and-performance/"
-        class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
-        
-        Debugging and performance
+        0.2.1
         
 
         
@@ -944,11 +770,6 @@
 </div>
                 
             
-        </ul>
-    </div>
-</div>
-                
-            
                 
                 
                 
@@ -963,244 +784,16 @@
 
 
 
-<div 
-    x-data="{ open: true }"
-    x-init="$nextTick(() => { open = $el.dataset.active === 'true' ? true : open })"
-    class="relative flex w-full min-w-0 flex-col p-2 rounded-md data-[active=true]:bg-accent"
-    data-required-link="/never"
-    data-active-link="$"
->
-    
-        <div
-            @click=""
-            class="ring-sidebar-ring flex h-4 shrink-0 items-center justify-between rounded-md px-2 text-xs font-medium text-muted-foreground cursor-pointer select-none"
-        >
-            <span>Master</span>
 
-            
-        </div>
-    
 
     
-    
-    
-        
-        
-        
-            
-        
-        
-        
-    
-    
-    
-        
-        
-        
-        
-        
-        
-        
-
-        
-            
-
-            
-
-            
-        
-    
-
-    <div x-show="open" x-collapse>
-        <ul class="flex flex-col">
-            
-            
-            <div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
-                <div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm">
-                    <ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-0.5">
-                        
-                            
-                            
-<li
-    data-slot="sidebar-menu-item"
-    data-required-link="/never"
-    data-sidebar="menu-item"
-    class="group/menu-item relative h-[30px]">
-    <a
-        data-slot="sidebar-menu-button"
-        data-active-link=""
-        data-sidebar="menu-button"
-        data-size="default" href="/master/"
-        class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
-        
-        Master
-        
-
-        
-
-        
-
-        
-    </a>
-</li>
-                            
-                        
-
-                    </ul>
-                </div>
-            </div>
-            
-            
-            
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-
-
-
-
-<div 
-    x-data="{ open: true }"
-    x-init="$nextTick(() => { open = $el.dataset.active === 'true' ? true : open })"
-    class="relative flex w-full min-w-0 flex-col p-2 rounded-md data-[active=true]:bg-accent"
-    data-required-link=""
-    data-active-link=""
->
-    
-        <div
-            @click=""
-            class="ring-sidebar-ring flex h-4 shrink-0 items-center justify-between rounded-md px-2 text-xs font-medium text-muted-foreground cursor-pointer select-none"
-        >
-            <span>Advanced</span>
-
-            
-        </div>
-    
-
-    
-    
-    
-        
-        
-        
-            
-        
-        
-        
-    
-        
-        
-        
-            
-        
-        
-        
-    
-    
-    
-
-    <div x-show="open" x-collapse>
-        <ul class="flex flex-col">
-            
-            
-            <div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
-                <div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm">
-                    <ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-0.5">
-                        
-                            
-                            
-<li
-    data-slot="sidebar-menu-item"
-    data-required-link=""
-    data-sidebar="menu-item"
-    class="group/menu-item relative h-[30px]">
-    <a
-        data-slot="sidebar-menu-button"
-        data-active-link=""
-        data-sidebar="menu-button"
-        data-size="default" href="/master/advanced/pragmas/"
-        class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
-        
-        Pragmas
-        
-
-        
-
-        
-
-        
-    </a>
-</li>
-                            
-                        
-                            
-                            
-<li
-    data-slot="sidebar-menu-item"
-    data-required-link=""
-    data-sidebar="menu-item"
-    class="group/menu-item relative h-[30px]">
-    <a
-        data-slot="sidebar-menu-button"
-        data-active-link=""
-        data-sidebar="menu-button"
-        data-size="default" href="/master/advanced/debugging-and-performance/"
-        class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
-        
-        Debugging and performance
-        
-
-        
-
-        
-
-        
-    </a>
-</li>
-                            
-                        
-
-                    </ul>
-                </div>
-            </div>
-            
-            
-            
-        </ul>
-    </div>
-</div>
-                
-            
-        </ul>
-    </div>
-</div>
-                
-            
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-
-
 
 
 <div 
     x-data="{ open: false }"
     x-init="$nextTick(() => { open = $el.dataset.active === 'true' ? true : open })"
     class="relative flex w-full min-w-0 flex-col p-2 rounded-md data-[active=true]:bg-accent"
+    style="padding-left: px;"
     data-required-link=""
     data-active-link="/quickshell/"
 >
@@ -1341,28 +934,91 @@
 
 
 
+
+
+    
+
+
 <div 
-    x-data="{ open: false }"
+    x-data="{ open: true }"
     x-init="$nextTick(() => { open = $el.dataset.active === 'true' ? true : open })"
     class="relative flex w-full min-w-0 flex-col p-2 rounded-md data-[active=true]:bg-accent"
+    style="padding-left: 0px;"
+    data-required-link="^\/0\.2\.1.*$"
+    data-active-link="$"
+>
+    
+
+    
+    
+    
+        
+        
+        
+            
+        
+        
+            
+        
+        
+    
+    
+    
+        
+        
+        
+        
+        
+        
+        
+
+        
+            
+
+            
+
+            
+        
+    
+
+    <div x-show="open" x-collapse>
+        <ul class="flex flex-col">
+            
+            
+            
+            
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+
+
+
+
+
+
+<div 
+    x-data="{ open: true }"
+    x-init="$nextTick(() => { open = $el.dataset.active === 'true' ? true : open })"
+    class="relative flex w-full min-w-0 flex-col p-2 rounded-md data-[active=true]:bg-accent"
+    style="padding-left: 8px;"
     data-required-link=""
-    data-active-link="/master/advanced|/0\.2\.1/advanced"
+    data-active-link=""
 >
     
         <div
-            @click="open = !open"
+            @click=""
             class="ring-sidebar-ring flex h-4 shrink-0 items-center justify-between rounded-md px-2 text-xs font-medium text-muted-foreground cursor-pointer select-none"
         >
             <span>Advanced</span>
 
-            
-            <svg 
-                :style="open ? 'transform: rotate(90deg)' : 'transform: rotate(0deg)'"
-                class="transition-transform duration-200 size-4"
-                fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M9 5l7 7-7 7"/>
-            </svg>
             
         </div>
     
@@ -1376,7 +1032,411 @@
             
         
         
+        
+    
+        
+        
+        
             
+        
+        
+        
+    
+    
+    
+
+    <div x-show="open" x-collapse>
+        <ul class="flex flex-col">
+            
+            
+            <div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
+                <div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm">
+                    <ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-0.5">
+                        
+                            
+                            
+<li
+    data-slot="sidebar-menu-item"
+    data-required-link=""
+    data-sidebar="menu-item"
+    class="group/menu-item relative h-[30px]">
+    <a
+        data-slot="sidebar-menu-button"
+        data-active-link=""
+        data-sidebar="menu-button"
+        data-size="default" href="/0.2.1/advanced/pragmas/"
+        class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
+        
+        Pragmas
+        
+
+        
+
+        
+
+        
+    </a>
+</li>
+                            
+                        
+                            
+                            
+<li
+    data-slot="sidebar-menu-item"
+    data-required-link=""
+    data-sidebar="menu-item"
+    class="group/menu-item relative h-[30px]">
+    <a
+        data-slot="sidebar-menu-button"
+        data-active-link=""
+        data-sidebar="menu-button"
+        data-size="default" href="/0.2.1/advanced/debugging-and-performance/"
+        class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
+        
+        Debugging and performance
+        
+
+        
+
+        
+
+        
+    </a>
+</li>
+                            
+                        
+
+                    </ul>
+                </div>
+            </div>
+            
+            
+            
+        </ul>
+    </div>
+</div>
+                
+            
+        </ul>
+    </div>
+</div>
+                
+            
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+
+
+
+
+
+    
+
+
+<div 
+    x-data="{ open: true }"
+    x-init="$nextTick(() => { open = $el.dataset.active === 'true' ? true : open })"
+    class="relative flex w-full min-w-0 flex-col p-2 rounded-md data-[active=true]:bg-accent"
+    style="padding-left: 0px;"
+    data-required-link="^\/(0\.3\.0(?:\/.*)?)$"
+    data-active-link="$"
+>
+    
+
+    
+    
+    
+        
+        
+        
+            
+        
+        
+            
+        
+        
+    
+    
+    
+        
+        
+        
+        
+        
+        
+        
+
+        
+            
+
+            
+
+            
+        
+    
+        
+        
+        
+        
+        
+        
+        
+
+        
+            
+
+            
+
+            
+        
+    
+
+    <div x-show="open" x-collapse>
+        <ul class="flex flex-col">
+            
+            
+            
+            
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+
+
+
+
+
+
+<div 
+    x-data="{ open: true }"
+    x-init="$nextTick(() => { open = $el.dataset.active === 'true' ? true : open })"
+    class="relative flex w-full min-w-0 flex-col p-2 rounded-md data-[active=true]:bg-accent"
+    style="padding-left: 8px;"
+    data-required-link=""
+    data-active-link=""
+>
+    
+        <div
+            @click=""
+            class="ring-sidebar-ring flex h-4 shrink-0 items-center justify-between rounded-md px-2 text-xs font-medium text-muted-foreground cursor-pointer select-none"
+        >
+            <span>Advanced</span>
+
+            
+        </div>
+    
+
+    
+    
+    
+        
+        
+        
+            
+        
+        
+        
+    
+        
+        
+        
+            
+        
+        
+        
+    
+        
+        
+        
+            
+        
+        
+        
+    
+    
+    
+
+    <div x-show="open" x-collapse>
+        <ul class="flex flex-col">
+            
+            
+            <div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
+                <div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm">
+                    <ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-0.5">
+                        
+                            
+                            
+<li
+    data-slot="sidebar-menu-item"
+    data-required-link=""
+    data-sidebar="menu-item"
+    class="group/menu-item relative h-[30px]">
+    <a
+        data-slot="sidebar-menu-button"
+        data-active-link=""
+        data-sidebar="menu-button"
+        data-size="default" href="/0.3.0/advanced/pragmas/"
+        class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
+        
+        Pragmas
+        
+
+        
+
+        
+
+        
+    </a>
+</li>
+                            
+                        
+                            
+                            
+<li
+    data-slot="sidebar-menu-item"
+    data-required-link=""
+    data-sidebar="menu-item"
+    class="group/menu-item relative h-[30px]">
+    <a
+        data-slot="sidebar-menu-button"
+        data-active-link=""
+        data-sidebar="menu-button"
+        data-size="default" href="/0.3.0/advanced/env-variables/"
+        class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
+        
+        Env Variables
+        
+
+        
+
+        
+
+        
+    </a>
+</li>
+                            
+                        
+                            
+                            
+<li
+    data-slot="sidebar-menu-item"
+    data-required-link=""
+    data-sidebar="menu-item"
+    class="group/menu-item relative h-[30px]">
+    <a
+        data-slot="sidebar-menu-button"
+        data-active-link=""
+        data-sidebar="menu-button"
+        data-size="default" href="/0.3.0/advanced/debugging-and-performance/"
+        class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
+        
+        Debug & Performance
+        
+
+        
+
+        
+
+        
+    </a>
+</li>
+                            
+                        
+
+                    </ul>
+                </div>
+            </div>
+            
+            
+            
+        </ul>
+    </div>
+</div>
+                
+            
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+
+
+
+
+
+
+<div 
+    x-data="{ open: true }"
+    x-init="$nextTick(() => { open = $el.dataset.active === 'true' ? true : open })"
+    class="relative flex w-full min-w-0 flex-col p-2 rounded-md data-[active=true]:bg-accent"
+    style="padding-left: 8px;"
+    data-required-link=""
+    data-active-link=""
+>
+    
+        <div
+            @click=""
+            class="ring-sidebar-ring flex h-4 shrink-0 items-center justify-between rounded-md px-2 text-xs font-medium text-muted-foreground cursor-pointer select-none"
+        >
+            <span>Tutorials</span>
+
+            
+        </div>
+    
+
+    
+    
+    
+        
+        
+        
+            
+        
+        
+        
+    
+        
+        
+        
+            
+        
+        
+        
+    
+        
+        
+        
+            
+        
+        
+        
+    
+        
+        
+        
+            
+        
         
         
     
@@ -1427,17 +1487,17 @@
                             
 <li
     data-slot="sidebar-menu-item"
-    data-required-link="/0\.2\.1/"
+    data-required-link=""
     data-sidebar="menu-item"
     class="group/menu-item relative h-[30px]">
     <a
         data-slot="sidebar-menu-button"
         data-active-link=""
         data-sidebar="menu-button"
-        data-size="default" href="/0.2.1/advanced/pragmas/"
+        data-size="default" href="/0.3.0/tutorials/simple-bar/"
         class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
         
-        Pragmas
+        Simple Bar
         
 
         
@@ -1453,7 +1513,405 @@
                             
 <li
     data-slot="sidebar-menu-item"
-    data-required-link="^\/(?!0\.2\.1(?:\/|$)).*$(master(?:\/.*)?|.*)$"
+    data-required-link=""
+    data-sidebar="menu-item"
+    class="group/menu-item relative h-[30px]">
+    <a
+        data-slot="sidebar-menu-button"
+        data-active-link=""
+        data-sidebar="menu-button"
+        data-size="default" href="/0.3.0/tutorials/config/"
+        class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
+        
+        Config
+        
+
+        
+
+        
+        
+        
+<span class="flex size-2 rounded-full bg-warning" title="New"></span>
+
+        
+        
+
+        
+    </a>
+</li>
+                            
+                        
+                            
+                            
+<li
+    data-slot="sidebar-menu-item"
+    data-required-link=""
+    data-sidebar="menu-item"
+    class="group/menu-item relative h-[30px]">
+    <a
+        data-slot="sidebar-menu-button"
+        data-active-link=""
+        data-sidebar="menu-button"
+        data-size="default" href="/0.3.0/tutorials/lockscreen/"
+        class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
+        
+        Lockscreen
+        
+
+        
+
+        
+        
+        
+<span class="flex size-2 rounded-full bg-warning" title="New"></span>
+
+        
+        
+
+        
+    </a>
+</li>
+                            
+                        
+                            
+                            
+<li
+    data-slot="sidebar-menu-item"
+    data-required-link=""
+    data-sidebar="menu-item"
+    class="group/menu-item relative h-[30px]">
+    <a
+        data-slot="sidebar-menu-button"
+        data-active-link=""
+        data-sidebar="menu-button"
+        data-size="default" href="/0.3.0/tutorials/bluetooth/"
+        class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
+        
+        Bluetooth
+        
+
+        
+
+        
+        
+        
+<span class="flex size-2 rounded-full bg-warning" title="New"></span>
+
+        
+        
+
+        
+    </a>
+</li>
+                            
+                        
+                            
+                            
+<li
+    data-slot="sidebar-menu-item"
+    data-required-link=""
+    data-sidebar="menu-item"
+    class="group/menu-item relative h-[30px]">
+    <a
+        data-slot="sidebar-menu-button"
+        data-active-link=""
+        data-sidebar="menu-button"
+        data-size="default" href="/0.3.0/tutorials/display-manager/"
+        class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
+        
+        Display manager
+        
+
+        
+
+        
+        
+        
+<span class="flex size-2 rounded-full bg-warning" title="New"></span>
+
+        
+        
+
+        
+    </a>
+</li>
+                            
+                        
+                            
+                            
+<li
+    data-slot="sidebar-menu-item"
+    data-required-link=""
+    data-sidebar="menu-item"
+    class="group/menu-item relative h-[30px]">
+    <a
+        data-slot="sidebar-menu-button"
+        data-active-link=""
+        data-sidebar="menu-button"
+        data-size="default" href="/0.3.0/tutorials/notifications/"
+        class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
+        
+        Notifications
+        
+
+        
+
+        
+        
+        
+<span class="flex size-2 rounded-full bg-warning" title="New"></span>
+
+        
+        
+
+        
+    </a>
+</li>
+                            
+                        
+                            
+                            
+<li
+    data-slot="sidebar-menu-item"
+    data-required-link=""
+    data-sidebar="menu-item"
+    class="group/menu-item relative h-[30px]">
+    <a
+        data-slot="sidebar-menu-button"
+        data-active-link=""
+        data-sidebar="menu-button"
+        data-size="default" href="/0.3.0/tutorials/wallpaper/"
+        class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
+        
+        Wallpaper
+        
+
+        
+
+        
+        
+        
+<span class="flex size-2 rounded-full bg-warning" title="New"></span>
+
+        
+        
+
+        
+    </a>
+</li>
+                            
+                        
+                            
+                            
+<li
+    data-slot="sidebar-menu-item"
+    data-required-link=""
+    data-sidebar="menu-item"
+    class="group/menu-item relative h-[30px]">
+    <a
+        data-slot="sidebar-menu-button"
+        data-active-link=""
+        data-sidebar="menu-button"
+        data-size="default" href="/0.3.0/tutorials/wifi/"
+        class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
+        
+        Wifi
+        
+
+        
+
+        
+        
+        
+<span class="flex size-2 rounded-full bg-warning" title="New"></span>
+
+        
+        
+
+        
+    </a>
+</li>
+                            
+                        
+
+                    </ul>
+                </div>
+            </div>
+            
+            
+            
+        </ul>
+    </div>
+</div>
+                
+            
+        </ul>
+    </div>
+</div>
+                
+            
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+
+
+
+
+
+    
+
+
+<div 
+    x-data="{ open: true }"
+    x-init="$nextTick(() => { open = $el.dataset.active === 'true' ? true : open })"
+    class="relative flex w-full min-w-0 flex-col p-2 rounded-md data-[active=true]:bg-accent"
+    style="padding-left: 0px;"
+    data-required-link="^\/(master(?:\/.*)?)$"
+    data-active-link="$"
+>
+    
+
+    
+    
+    
+        
+        
+        
+            
+        
+        
+            
+        
+        
+    
+    
+    
+        
+        
+        
+        
+        
+        
+        
+
+        
+            
+
+            
+
+            
+        
+    
+        
+        
+        
+        
+        
+        
+        
+
+        
+            
+
+            
+
+            
+        
+    
+
+    <div x-show="open" x-collapse>
+        <ul class="flex flex-col">
+            
+            
+            
+            
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+
+
+
+
+
+
+<div 
+    x-data="{ open: true }"
+    x-init="$nextTick(() => { open = $el.dataset.active === 'true' ? true : open })"
+    class="relative flex w-full min-w-0 flex-col p-2 rounded-md data-[active=true]:bg-accent"
+    style="padding-left: 8px;"
+    data-required-link=""
+    data-active-link=""
+>
+    
+        <div
+            @click=""
+            class="ring-sidebar-ring flex h-4 shrink-0 items-center justify-between rounded-md px-2 text-xs font-medium text-muted-foreground cursor-pointer select-none"
+        >
+            <span>Advanced</span>
+
+            
+        </div>
+    
+
+    
+    
+    
+        
+        
+        
+            
+        
+        
+        
+    
+        
+        
+        
+            
+        
+        
+        
+    
+        
+        
+        
+            
+        
+        
+        
+    
+    
+    
+
+    <div x-show="open" x-collapse>
+        <ul class="flex flex-col">
+            
+            
+            <div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
+                <div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm">
+                    <ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-0.5">
+                        
+                            
+                            
+<li
+    data-slot="sidebar-menu-item"
+    data-required-link=""
     data-sidebar="menu-item"
     class="group/menu-item relative h-[30px]">
     <a
@@ -1479,17 +1937,17 @@
                             
 <li
     data-slot="sidebar-menu-item"
-    data-required-link="^\/(0\.2\.1.*)$"
+    data-required-link=""
     data-sidebar="menu-item"
     class="group/menu-item relative h-[30px]">
     <a
         data-slot="sidebar-menu-button"
         data-active-link=""
         data-sidebar="menu-button"
-        data-size="default" href="/0.2.1/advanced/debugging-and-performance/"
+        data-size="default" href="/master/advanced/env-variable/"
         class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
         
-        Debugging & Performance
+        Env variable
         
 
         
@@ -1505,7 +1963,7 @@
                             
 <li
     data-slot="sidebar-menu-item"
-    data-required-link="^\/(?!0\.2\.1(?:\/|$)).*$(master(?:\/.*)?|.*)$"
+    data-required-link=""
     data-sidebar="menu-item"
     class="group/menu-item relative h-[30px]">
     <a
@@ -1515,7 +1973,7 @@
         data-size="default" href="/master/advanced/debugging-and-performance/"
         class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
         
-        Debugging & Performance
+        Debug & Performance
         
 
         
@@ -1553,10 +2011,397 @@
 
 
 
+
+
+
 <div 
     x-data="{ open: true }"
     x-init="$nextTick(() => { open = $el.dataset.active === 'true' ? true : open })"
     class="relative flex w-full min-w-0 flex-col p-2 rounded-md data-[active=true]:bg-accent"
+    style="padding-left: 8px;"
+    data-required-link=""
+    data-active-link=""
+>
+    
+        <div
+            @click=""
+            class="ring-sidebar-ring flex h-4 shrink-0 items-center justify-between rounded-md px-2 text-xs font-medium text-muted-foreground cursor-pointer select-none"
+        >
+            <span>Tutorials</span>
+
+            
+        </div>
+    
+
+    
+    
+    
+        
+        
+        
+            
+        
+        
+        
+    
+        
+        
+        
+            
+        
+        
+        
+    
+        
+        
+        
+            
+        
+        
+        
+    
+        
+        
+        
+            
+        
+        
+        
+    
+        
+        
+        
+            
+        
+        
+        
+    
+        
+        
+        
+            
+        
+        
+        
+    
+        
+        
+        
+            
+        
+        
+        
+    
+        
+        
+        
+            
+        
+        
+        
+    
+    
+    
+
+    <div x-show="open" x-collapse>
+        <ul class="flex flex-col">
+            
+            
+            <div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
+                <div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm">
+                    <ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-0.5">
+                        
+                            
+                            
+<li
+    data-slot="sidebar-menu-item"
+    data-required-link=""
+    data-sidebar="menu-item"
+    class="group/menu-item relative h-[30px]">
+    <a
+        data-slot="sidebar-menu-button"
+        data-active-link=""
+        data-sidebar="menu-button"
+        data-size="default" href="/master/tutorials/simple-bar/"
+        class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
+        
+        Simple Bar
+        
+
+        
+
+        
+
+        
+    </a>
+</li>
+                            
+                        
+                            
+                            
+<li
+    data-slot="sidebar-menu-item"
+    data-required-link=""
+    data-sidebar="menu-item"
+    class="group/menu-item relative h-[30px]">
+    <a
+        data-slot="sidebar-menu-button"
+        data-active-link=""
+        data-sidebar="menu-button"
+        data-size="default" href="/master/tutorials/config/"
+        class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
+        
+        Config
+        
+
+        
+
+        
+        
+        
+<span class="flex size-2 rounded-full bg-warning" title="New"></span>
+
+        
+        
+
+        
+    </a>
+</li>
+                            
+                        
+                            
+                            
+<li
+    data-slot="sidebar-menu-item"
+    data-required-link=""
+    data-sidebar="menu-item"
+    class="group/menu-item relative h-[30px]">
+    <a
+        data-slot="sidebar-menu-button"
+        data-active-link=""
+        data-sidebar="menu-button"
+        data-size="default" href="/master/tutorials/lockscreen/"
+        class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
+        
+        Lockscreen
+        
+
+        
+
+        
+        
+        
+<span class="flex size-2 rounded-full bg-warning" title="New"></span>
+
+        
+        
+
+        
+    </a>
+</li>
+                            
+                        
+                            
+                            
+<li
+    data-slot="sidebar-menu-item"
+    data-required-link=""
+    data-sidebar="menu-item"
+    class="group/menu-item relative h-[30px]">
+    <a
+        data-slot="sidebar-menu-button"
+        data-active-link=""
+        data-sidebar="menu-button"
+        data-size="default" href="/master/tutorials/bluetooth/"
+        class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
+        
+        Bluetooth
+        
+
+        
+
+        
+        
+        
+<span class="flex size-2 rounded-full bg-warning" title="New"></span>
+
+        
+        
+
+        
+    </a>
+</li>
+                            
+                        
+                            
+                            
+<li
+    data-slot="sidebar-menu-item"
+    data-required-link=""
+    data-sidebar="menu-item"
+    class="group/menu-item relative h-[30px]">
+    <a
+        data-slot="sidebar-menu-button"
+        data-active-link=""
+        data-sidebar="menu-button"
+        data-size="default" href="/master/tutorials/display-manager/"
+        class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
+        
+        Display manager
+        
+
+        
+
+        
+        
+        
+<span class="flex size-2 rounded-full bg-warning" title="New"></span>
+
+        
+        
+
+        
+    </a>
+</li>
+                            
+                        
+                            
+                            
+<li
+    data-slot="sidebar-menu-item"
+    data-required-link=""
+    data-sidebar="menu-item"
+    class="group/menu-item relative h-[30px]">
+    <a
+        data-slot="sidebar-menu-button"
+        data-active-link=""
+        data-sidebar="menu-button"
+        data-size="default" href="/master/tutorials/notifications/"
+        class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
+        
+        Notifications
+        
+
+        
+
+        
+        
+        
+<span class="flex size-2 rounded-full bg-warning" title="New"></span>
+
+        
+        
+
+        
+    </a>
+</li>
+                            
+                        
+                            
+                            
+<li
+    data-slot="sidebar-menu-item"
+    data-required-link=""
+    data-sidebar="menu-item"
+    class="group/menu-item relative h-[30px]">
+    <a
+        data-slot="sidebar-menu-button"
+        data-active-link=""
+        data-sidebar="menu-button"
+        data-size="default" href="/master/tutorials/wallpaper/"
+        class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
+        
+        Wallpaper
+        
+
+        
+
+        
+        
+        
+<span class="flex size-2 rounded-full bg-warning" title="New"></span>
+
+        
+        
+
+        
+    </a>
+</li>
+                            
+                        
+                            
+                            
+<li
+    data-slot="sidebar-menu-item"
+    data-required-link=""
+    data-sidebar="menu-item"
+    class="group/menu-item relative h-[30px]">
+    <a
+        data-slot="sidebar-menu-button"
+        data-active-link=""
+        data-sidebar="menu-button"
+        data-size="default" href="/master/tutorials/wifi/"
+        class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
+        
+        Wifi
+        
+
+        
+
+        
+        
+        
+<span class="flex size-2 rounded-full bg-warning" title="New"></span>
+
+        
+        
+
+        
+    </a>
+</li>
+                            
+                        
+
+                    </ul>
+                </div>
+            </div>
+            
+            
+            
+        </ul>
+    </div>
+</div>
+                
+            
+        </ul>
+    </div>
+</div>
+                
+            
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+
+
+
+
+
+    
+
+
+<div 
+    x-data="{ open: true }"
+    x-init="$nextTick(() => { open = $el.dataset.active === 'true' ? true : open })"
+    class="relative flex w-full min-w-0 flex-col p-2 rounded-md data-[active=true]:bg-accent"
+    style="padding-left: 0px;"
     data-required-link=""
     data-active-link="$"
 >
@@ -1675,7 +2520,7 @@
     <div class="flex flex-col gap-2">
       <div id="page-header" class="flex items-start justify-between">
         <h1 class="scroll-m-20 text-4xl font-semibold tracking-tight sm:text-3xl xl:text-4xl">
-          0.2.1
+          Index
         </h1>
 
         <div class="flex items-center gap-2 pt-1.5">
@@ -1695,7 +2540,7 @@
           
             <a data-slot="button" id="previous-button"
                 class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-secondary text-secondary-foreground hover:bg-secondary/80 extend-touch-target size-8 shadow-none md:size-7"
-                href="/getting-started/">
+                href="/style-guide/">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                 class="tabler-icon tabler-icon-arrow-left">
@@ -1742,7 +2587,7 @@
     
         <a data-slot="button"
             class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-secondary text-secondary-foreground hover:bg-secondary/80 h-8 rounded-md gap-1.5 px-3 has-[&gt;svg]:px-2.5 shadow-none"
-            href="/getting-started/">
+            href="/style-guide/">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                 class="tabler-icon tabler-icon-arrow-left ">
@@ -1750,7 +2595,7 @@
                 <path d="M5 12l6 6"></path>
                 <path d="M5 12l6 -6"></path>
             </svg>
-            <span class="max-[500px]:hidden">Getting Started</span>
+            <span class="max-[500px]:hidden">Title</span>
         </a>
     
     
@@ -1795,10 +2640,16 @@
 
 
 
+
+
+    
+
+
 <div 
     x-data="{ open: true }"
     x-init="$nextTick(() => { open = $el.dataset.active === 'true' ? true : open })"
     class="relative flex w-full min-w-0 flex-col p-2 rounded-md data-[active=true]:bg-accent"
+    style="padding-left: px;"
     data-required-link=""
     data-active-link="$"
 >
@@ -1843,37 +2694,17 @@
         
         
     
+        
+        
+        
+            
+        
+        
+            
+        
+        
     
     
-        
-        
-        
-        
-        
-        
-        
-
-        
-            
-
-            
-                
-                
-                    
-                
-                
-                    
-                
-                
-                    
-                
-                
-                
-                
-            
-
-            
-        
     
         
         
@@ -1888,7 +2719,6 @@
 
             
                 
-                    
                 
                 
                     
@@ -1898,6 +2728,7 @@
                 
                 
                 
+                    
                 
                 
             
@@ -1923,6 +2754,8 @@
                     
                 
                 
+                    
+                
                 
                 
                     
@@ -1947,15 +2780,43 @@
             
                 
                 
+                
+                    
+                
+                
+                
+                
+                    
+                
+                
+            
+
+            
+        
+    
+        
+        
+        
+        
+        
+        
+        
+
+        
+            
+
+            
+                
+                
+                
                     
                 
                 
                     
                 
                 
+                
                     
-                
-                
                 
                 
             
@@ -2103,10 +2964,16 @@
 
 
 
+
+
+    
+
+
 <div 
     x-data="{ open: false }"
     x-init="$nextTick(() => { open = $el.dataset.active === 'true' ? true : open })"
     class="relative flex w-full min-w-0 flex-col p-2 rounded-md data-[active=true]:bg-accent"
+    style="padding-left: px;"
     data-required-link=""
     data-active-link="$"
 >
@@ -2158,6 +3025,14 @@
         
         
     
+        
+        
+        
+            
+        
+        
+        
+    
     
     
 
@@ -2180,10 +3055,36 @@
         data-slot="sidebar-menu-button"
         data-active-link="/master/"
         data-sidebar="menu-button"
-        data-size="default" href="/master/"
+        data-size="default" href="/master/advanced/pragmas/"
         class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
         
         Master
+        
+
+        
+
+        
+
+        
+    </a>
+</li>
+                            
+                        
+                            
+                            
+<li
+    data-slot="sidebar-menu-item"
+    data-required-link=""
+    data-sidebar="menu-item"
+    class="group/menu-item relative h-[30px]">
+    <a
+        data-slot="sidebar-menu-button"
+        data-active-link="/0.3.0/"
+        data-sidebar="menu-button"
+        data-size="default" href="/0.3.0/advanced/pragmas/"
+        class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
+        
+        0.3.0
         
 
         
@@ -2206,239 +3107,10 @@
         data-slot="sidebar-menu-button"
         data-active-link="/0.2.1/"
         data-sidebar="menu-button"
-        data-size="default" href="/0.2.1/"
-        class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
-        
-        0.2.1
-        
-
-        
-
-        
-
-        
-    </a>
-</li>
-                            
-                        
-
-                    </ul>
-                </div>
-            </div>
-            
-            
-            
-        </ul>
-    </div>
-</div>
-                
-            
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-
-
-
-
-<div 
-    x-data="{ open: true }"
-    x-init="$nextTick(() => { open = $el.dataset.active === 'true' ? true : open })"
-    class="relative flex w-full min-w-0 flex-col p-2 rounded-md data-[active=true]:bg-accent"
-    data-required-link="/never"
-    data-active-link="$"
->
-    
-        <div
-            @click=""
-            class="ring-sidebar-ring flex h-4 shrink-0 items-center justify-between rounded-md px-2 text-xs font-medium text-muted-foreground cursor-pointer select-none"
-        >
-            <span>0.2.1</span>
-
-            
-        </div>
-    
-
-    
-    
-    
-        
-        
-        
-            
-        
-        
-        
-    
-    
-    
-        
-        
-        
-        
-        
-        
-        
-
-        
-            
-
-            
-
-            
-        
-    
-
-    <div x-show="open" x-collapse>
-        <ul class="flex flex-col">
-            
-            
-            <div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
-                <div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm">
-                    <ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-0.5">
-                        
-                            
-                            
-<li
-    data-slot="sidebar-menu-item"
-    data-required-link="/never"
-    data-sidebar="menu-item"
-    class="group/menu-item relative h-[30px]">
-    <a
-        data-slot="sidebar-menu-button"
-        data-active-link=""
-        data-sidebar="menu-button"
-        data-size="default" href="/0.2.1/"
-        class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
-        
-        0.2.1
-        
-
-        
-
-        
-
-        
-    </a>
-</li>
-                            
-                        
-
-                    </ul>
-                </div>
-            </div>
-            
-            
-            
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-
-
-
-
-<div 
-    x-data="{ open: true }"
-    x-init="$nextTick(() => { open = $el.dataset.active === 'true' ? true : open })"
-    class="relative flex w-full min-w-0 flex-col p-2 rounded-md data-[active=true]:bg-accent"
-    data-required-link=""
-    data-active-link=""
->
-    
-        <div
-            @click=""
-            class="ring-sidebar-ring flex h-4 shrink-0 items-center justify-between rounded-md px-2 text-xs font-medium text-muted-foreground cursor-pointer select-none"
-        >
-            <span>Advanced</span>
-
-            
-        </div>
-    
-
-    
-    
-    
-        
-        
-        
-            
-        
-        
-        
-    
-        
-        
-        
-            
-        
-        
-        
-    
-    
-    
-
-    <div x-show="open" x-collapse>
-        <ul class="flex flex-col">
-            
-            
-            <div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
-                <div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm">
-                    <ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-0.5">
-                        
-                            
-                            
-<li
-    data-slot="sidebar-menu-item"
-    data-required-link=""
-    data-sidebar="menu-item"
-    class="group/menu-item relative h-[30px]">
-    <a
-        data-slot="sidebar-menu-button"
-        data-active-link=""
-        data-sidebar="menu-button"
         data-size="default" href="/0.2.1/advanced/pragmas/"
         class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
         
-        Pragmas
-        
-
-        
-
-        
-
-        
-    </a>
-</li>
-                            
-                        
-                            
-                            
-<li
-    data-slot="sidebar-menu-item"
-    data-required-link=""
-    data-sidebar="menu-item"
-    class="group/menu-item relative h-[30px]">
-    <a
-        data-slot="sidebar-menu-button"
-        data-active-link=""
-        data-sidebar="menu-button"
-        data-size="default" href="/0.2.1/advanced/debugging-and-performance/"
-        class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
-        
-        Debugging and performance
+        0.2.1
         
 
         
@@ -2462,11 +3134,6 @@
 </div>
                 
             
-        </ul>
-    </div>
-</div>
-                
-            
                 
                 
                 
@@ -2481,244 +3148,16 @@
 
 
 
-<div 
-    x-data="{ open: true }"
-    x-init="$nextTick(() => { open = $el.dataset.active === 'true' ? true : open })"
-    class="relative flex w-full min-w-0 flex-col p-2 rounded-md data-[active=true]:bg-accent"
-    data-required-link="/never"
-    data-active-link="$"
->
-    
-        <div
-            @click=""
-            class="ring-sidebar-ring flex h-4 shrink-0 items-center justify-between rounded-md px-2 text-xs font-medium text-muted-foreground cursor-pointer select-none"
-        >
-            <span>Master</span>
 
-            
-        </div>
-    
 
     
-    
-    
-        
-        
-        
-            
-        
-        
-        
-    
-    
-    
-        
-        
-        
-        
-        
-        
-        
-
-        
-            
-
-            
-
-            
-        
-    
-
-    <div x-show="open" x-collapse>
-        <ul class="flex flex-col">
-            
-            
-            <div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
-                <div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm">
-                    <ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-0.5">
-                        
-                            
-                            
-<li
-    data-slot="sidebar-menu-item"
-    data-required-link="/never"
-    data-sidebar="menu-item"
-    class="group/menu-item relative h-[30px]">
-    <a
-        data-slot="sidebar-menu-button"
-        data-active-link=""
-        data-sidebar="menu-button"
-        data-size="default" href="/master/"
-        class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
-        
-        Master
-        
-
-        
-
-        
-
-        
-    </a>
-</li>
-                            
-                        
-
-                    </ul>
-                </div>
-            </div>
-            
-            
-            
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-
-
-
-
-<div 
-    x-data="{ open: true }"
-    x-init="$nextTick(() => { open = $el.dataset.active === 'true' ? true : open })"
-    class="relative flex w-full min-w-0 flex-col p-2 rounded-md data-[active=true]:bg-accent"
-    data-required-link=""
-    data-active-link=""
->
-    
-        <div
-            @click=""
-            class="ring-sidebar-ring flex h-4 shrink-0 items-center justify-between rounded-md px-2 text-xs font-medium text-muted-foreground cursor-pointer select-none"
-        >
-            <span>Advanced</span>
-
-            
-        </div>
-    
-
-    
-    
-    
-        
-        
-        
-            
-        
-        
-        
-    
-        
-        
-        
-            
-        
-        
-        
-    
-    
-    
-
-    <div x-show="open" x-collapse>
-        <ul class="flex flex-col">
-            
-            
-            <div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
-                <div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm">
-                    <ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-0.5">
-                        
-                            
-                            
-<li
-    data-slot="sidebar-menu-item"
-    data-required-link=""
-    data-sidebar="menu-item"
-    class="group/menu-item relative h-[30px]">
-    <a
-        data-slot="sidebar-menu-button"
-        data-active-link=""
-        data-sidebar="menu-button"
-        data-size="default" href="/master/advanced/pragmas/"
-        class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
-        
-        Pragmas
-        
-
-        
-
-        
-
-        
-    </a>
-</li>
-                            
-                        
-                            
-                            
-<li
-    data-slot="sidebar-menu-item"
-    data-required-link=""
-    data-sidebar="menu-item"
-    class="group/menu-item relative h-[30px]">
-    <a
-        data-slot="sidebar-menu-button"
-        data-active-link=""
-        data-sidebar="menu-button"
-        data-size="default" href="/master/advanced/debugging-and-performance/"
-        class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
-        
-        Debugging and performance
-        
-
-        
-
-        
-
-        
-    </a>
-</li>
-                            
-                        
-
-                    </ul>
-                </div>
-            </div>
-            
-            
-            
-        </ul>
-    </div>
-</div>
-                
-            
-        </ul>
-    </div>
-</div>
-                
-            
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-
-
 
 
 <div 
     x-data="{ open: false }"
     x-init="$nextTick(() => { open = $el.dataset.active === 'true' ? true : open })"
     class="relative flex w-full min-w-0 flex-col p-2 rounded-md data-[active=true]:bg-accent"
+    style="padding-left: px;"
     data-required-link=""
     data-active-link="/quickshell/"
 >
@@ -2859,28 +3298,91 @@
 
 
 
+
+
+    
+
+
 <div 
-    x-data="{ open: false }"
+    x-data="{ open: true }"
     x-init="$nextTick(() => { open = $el.dataset.active === 'true' ? true : open })"
     class="relative flex w-full min-w-0 flex-col p-2 rounded-md data-[active=true]:bg-accent"
+    style="padding-left: 0px;"
+    data-required-link="^\/0\.2\.1.*$"
+    data-active-link="$"
+>
+    
+
+    
+    
+    
+        
+        
+        
+            
+        
+        
+            
+        
+        
+    
+    
+    
+        
+        
+        
+        
+        
+        
+        
+
+        
+            
+
+            
+
+            
+        
+    
+
+    <div x-show="open" x-collapse>
+        <ul class="flex flex-col">
+            
+            
+            
+            
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+
+
+
+
+
+
+<div 
+    x-data="{ open: true }"
+    x-init="$nextTick(() => { open = $el.dataset.active === 'true' ? true : open })"
+    class="relative flex w-full min-w-0 flex-col p-2 rounded-md data-[active=true]:bg-accent"
+    style="padding-left: 8px;"
     data-required-link=""
-    data-active-link="/master/advanced|/0\.2\.1/advanced"
+    data-active-link=""
 >
     
         <div
-            @click="open = !open"
+            @click=""
             class="ring-sidebar-ring flex h-4 shrink-0 items-center justify-between rounded-md px-2 text-xs font-medium text-muted-foreground cursor-pointer select-none"
         >
             <span>Advanced</span>
 
-            
-            <svg 
-                :style="open ? 'transform: rotate(90deg)' : 'transform: rotate(0deg)'"
-                class="transition-transform duration-200 size-4"
-                fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M9 5l7 7-7 7"/>
-            </svg>
             
         </div>
     
@@ -2894,7 +3396,411 @@
             
         
         
+        
+    
+        
+        
+        
             
+        
+        
+        
+    
+    
+    
+
+    <div x-show="open" x-collapse>
+        <ul class="flex flex-col">
+            
+            
+            <div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
+                <div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm">
+                    <ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-0.5">
+                        
+                            
+                            
+<li
+    data-slot="sidebar-menu-item"
+    data-required-link=""
+    data-sidebar="menu-item"
+    class="group/menu-item relative h-[30px]">
+    <a
+        data-slot="sidebar-menu-button"
+        data-active-link=""
+        data-sidebar="menu-button"
+        data-size="default" href="/0.2.1/advanced/pragmas/"
+        class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
+        
+        Pragmas
+        
+
+        
+
+        
+
+        
+    </a>
+</li>
+                            
+                        
+                            
+                            
+<li
+    data-slot="sidebar-menu-item"
+    data-required-link=""
+    data-sidebar="menu-item"
+    class="group/menu-item relative h-[30px]">
+    <a
+        data-slot="sidebar-menu-button"
+        data-active-link=""
+        data-sidebar="menu-button"
+        data-size="default" href="/0.2.1/advanced/debugging-and-performance/"
+        class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
+        
+        Debugging and performance
+        
+
+        
+
+        
+
+        
+    </a>
+</li>
+                            
+                        
+
+                    </ul>
+                </div>
+            </div>
+            
+            
+            
+        </ul>
+    </div>
+</div>
+                
+            
+        </ul>
+    </div>
+</div>
+                
+            
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+
+
+
+
+
+    
+
+
+<div 
+    x-data="{ open: true }"
+    x-init="$nextTick(() => { open = $el.dataset.active === 'true' ? true : open })"
+    class="relative flex w-full min-w-0 flex-col p-2 rounded-md data-[active=true]:bg-accent"
+    style="padding-left: 0px;"
+    data-required-link="^\/(0\.3\.0(?:\/.*)?)$"
+    data-active-link="$"
+>
+    
+
+    
+    
+    
+        
+        
+        
+            
+        
+        
+            
+        
+        
+    
+    
+    
+        
+        
+        
+        
+        
+        
+        
+
+        
+            
+
+            
+
+            
+        
+    
+        
+        
+        
+        
+        
+        
+        
+
+        
+            
+
+            
+
+            
+        
+    
+
+    <div x-show="open" x-collapse>
+        <ul class="flex flex-col">
+            
+            
+            
+            
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+
+
+
+
+
+
+<div 
+    x-data="{ open: true }"
+    x-init="$nextTick(() => { open = $el.dataset.active === 'true' ? true : open })"
+    class="relative flex w-full min-w-0 flex-col p-2 rounded-md data-[active=true]:bg-accent"
+    style="padding-left: 8px;"
+    data-required-link=""
+    data-active-link=""
+>
+    
+        <div
+            @click=""
+            class="ring-sidebar-ring flex h-4 shrink-0 items-center justify-between rounded-md px-2 text-xs font-medium text-muted-foreground cursor-pointer select-none"
+        >
+            <span>Advanced</span>
+
+            
+        </div>
+    
+
+    
+    
+    
+        
+        
+        
+            
+        
+        
+        
+    
+        
+        
+        
+            
+        
+        
+        
+    
+        
+        
+        
+            
+        
+        
+        
+    
+    
+    
+
+    <div x-show="open" x-collapse>
+        <ul class="flex flex-col">
+            
+            
+            <div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
+                <div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm">
+                    <ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-0.5">
+                        
+                            
+                            
+<li
+    data-slot="sidebar-menu-item"
+    data-required-link=""
+    data-sidebar="menu-item"
+    class="group/menu-item relative h-[30px]">
+    <a
+        data-slot="sidebar-menu-button"
+        data-active-link=""
+        data-sidebar="menu-button"
+        data-size="default" href="/0.3.0/advanced/pragmas/"
+        class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
+        
+        Pragmas
+        
+
+        
+
+        
+
+        
+    </a>
+</li>
+                            
+                        
+                            
+                            
+<li
+    data-slot="sidebar-menu-item"
+    data-required-link=""
+    data-sidebar="menu-item"
+    class="group/menu-item relative h-[30px]">
+    <a
+        data-slot="sidebar-menu-button"
+        data-active-link=""
+        data-sidebar="menu-button"
+        data-size="default" href="/0.3.0/advanced/env-variables/"
+        class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
+        
+        Env Variables
+        
+
+        
+
+        
+
+        
+    </a>
+</li>
+                            
+                        
+                            
+                            
+<li
+    data-slot="sidebar-menu-item"
+    data-required-link=""
+    data-sidebar="menu-item"
+    class="group/menu-item relative h-[30px]">
+    <a
+        data-slot="sidebar-menu-button"
+        data-active-link=""
+        data-sidebar="menu-button"
+        data-size="default" href="/0.3.0/advanced/debugging-and-performance/"
+        class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
+        
+        Debug & Performance
+        
+
+        
+
+        
+
+        
+    </a>
+</li>
+                            
+                        
+
+                    </ul>
+                </div>
+            </div>
+            
+            
+            
+        </ul>
+    </div>
+</div>
+                
+            
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+
+
+
+
+
+
+<div 
+    x-data="{ open: true }"
+    x-init="$nextTick(() => { open = $el.dataset.active === 'true' ? true : open })"
+    class="relative flex w-full min-w-0 flex-col p-2 rounded-md data-[active=true]:bg-accent"
+    style="padding-left: 8px;"
+    data-required-link=""
+    data-active-link=""
+>
+    
+        <div
+            @click=""
+            class="ring-sidebar-ring flex h-4 shrink-0 items-center justify-between rounded-md px-2 text-xs font-medium text-muted-foreground cursor-pointer select-none"
+        >
+            <span>Tutorials</span>
+
+            
+        </div>
+    
+
+    
+    
+    
+        
+        
+        
+            
+        
+        
+        
+    
+        
+        
+        
+            
+        
+        
+        
+    
+        
+        
+        
+            
+        
+        
+        
+    
+        
+        
+        
+            
+        
         
         
     
@@ -2945,17 +3851,17 @@
                             
 <li
     data-slot="sidebar-menu-item"
-    data-required-link="/0\.2\.1/"
+    data-required-link=""
     data-sidebar="menu-item"
     class="group/menu-item relative h-[30px]">
     <a
         data-slot="sidebar-menu-button"
         data-active-link=""
         data-sidebar="menu-button"
-        data-size="default" href="/0.2.1/advanced/pragmas/"
+        data-size="default" href="/0.3.0/tutorials/simple-bar/"
         class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
         
-        Pragmas
+        Simple Bar
         
 
         
@@ -2971,7 +3877,405 @@
                             
 <li
     data-slot="sidebar-menu-item"
-    data-required-link="^\/(?!0\.2\.1(?:\/|$)).*$(master(?:\/.*)?|.*)$"
+    data-required-link=""
+    data-sidebar="menu-item"
+    class="group/menu-item relative h-[30px]">
+    <a
+        data-slot="sidebar-menu-button"
+        data-active-link=""
+        data-sidebar="menu-button"
+        data-size="default" href="/0.3.0/tutorials/config/"
+        class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
+        
+        Config
+        
+
+        
+
+        
+        
+        
+<span class="flex size-2 rounded-full bg-warning" title="New"></span>
+
+        
+        
+
+        
+    </a>
+</li>
+                            
+                        
+                            
+                            
+<li
+    data-slot="sidebar-menu-item"
+    data-required-link=""
+    data-sidebar="menu-item"
+    class="group/menu-item relative h-[30px]">
+    <a
+        data-slot="sidebar-menu-button"
+        data-active-link=""
+        data-sidebar="menu-button"
+        data-size="default" href="/0.3.0/tutorials/lockscreen/"
+        class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
+        
+        Lockscreen
+        
+
+        
+
+        
+        
+        
+<span class="flex size-2 rounded-full bg-warning" title="New"></span>
+
+        
+        
+
+        
+    </a>
+</li>
+                            
+                        
+                            
+                            
+<li
+    data-slot="sidebar-menu-item"
+    data-required-link=""
+    data-sidebar="menu-item"
+    class="group/menu-item relative h-[30px]">
+    <a
+        data-slot="sidebar-menu-button"
+        data-active-link=""
+        data-sidebar="menu-button"
+        data-size="default" href="/0.3.0/tutorials/bluetooth/"
+        class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
+        
+        Bluetooth
+        
+
+        
+
+        
+        
+        
+<span class="flex size-2 rounded-full bg-warning" title="New"></span>
+
+        
+        
+
+        
+    </a>
+</li>
+                            
+                        
+                            
+                            
+<li
+    data-slot="sidebar-menu-item"
+    data-required-link=""
+    data-sidebar="menu-item"
+    class="group/menu-item relative h-[30px]">
+    <a
+        data-slot="sidebar-menu-button"
+        data-active-link=""
+        data-sidebar="menu-button"
+        data-size="default" href="/0.3.0/tutorials/display-manager/"
+        class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
+        
+        Display manager
+        
+
+        
+
+        
+        
+        
+<span class="flex size-2 rounded-full bg-warning" title="New"></span>
+
+        
+        
+
+        
+    </a>
+</li>
+                            
+                        
+                            
+                            
+<li
+    data-slot="sidebar-menu-item"
+    data-required-link=""
+    data-sidebar="menu-item"
+    class="group/menu-item relative h-[30px]">
+    <a
+        data-slot="sidebar-menu-button"
+        data-active-link=""
+        data-sidebar="menu-button"
+        data-size="default" href="/0.3.0/tutorials/notifications/"
+        class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
+        
+        Notifications
+        
+
+        
+
+        
+        
+        
+<span class="flex size-2 rounded-full bg-warning" title="New"></span>
+
+        
+        
+
+        
+    </a>
+</li>
+                            
+                        
+                            
+                            
+<li
+    data-slot="sidebar-menu-item"
+    data-required-link=""
+    data-sidebar="menu-item"
+    class="group/menu-item relative h-[30px]">
+    <a
+        data-slot="sidebar-menu-button"
+        data-active-link=""
+        data-sidebar="menu-button"
+        data-size="default" href="/0.3.0/tutorials/wallpaper/"
+        class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
+        
+        Wallpaper
+        
+
+        
+
+        
+        
+        
+<span class="flex size-2 rounded-full bg-warning" title="New"></span>
+
+        
+        
+
+        
+    </a>
+</li>
+                            
+                        
+                            
+                            
+<li
+    data-slot="sidebar-menu-item"
+    data-required-link=""
+    data-sidebar="menu-item"
+    class="group/menu-item relative h-[30px]">
+    <a
+        data-slot="sidebar-menu-button"
+        data-active-link=""
+        data-sidebar="menu-button"
+        data-size="default" href="/0.3.0/tutorials/wifi/"
+        class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
+        
+        Wifi
+        
+
+        
+
+        
+        
+        
+<span class="flex size-2 rounded-full bg-warning" title="New"></span>
+
+        
+        
+
+        
+    </a>
+</li>
+                            
+                        
+
+                    </ul>
+                </div>
+            </div>
+            
+            
+            
+        </ul>
+    </div>
+</div>
+                
+            
+        </ul>
+    </div>
+</div>
+                
+            
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+
+
+
+
+
+    
+
+
+<div 
+    x-data="{ open: true }"
+    x-init="$nextTick(() => { open = $el.dataset.active === 'true' ? true : open })"
+    class="relative flex w-full min-w-0 flex-col p-2 rounded-md data-[active=true]:bg-accent"
+    style="padding-left: 0px;"
+    data-required-link="^\/(master(?:\/.*)?)$"
+    data-active-link="$"
+>
+    
+
+    
+    
+    
+        
+        
+        
+            
+        
+        
+            
+        
+        
+    
+    
+    
+        
+        
+        
+        
+        
+        
+        
+
+        
+            
+
+            
+
+            
+        
+    
+        
+        
+        
+        
+        
+        
+        
+
+        
+            
+
+            
+
+            
+        
+    
+
+    <div x-show="open" x-collapse>
+        <ul class="flex flex-col">
+            
+            
+            
+            
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+
+
+
+
+
+
+<div 
+    x-data="{ open: true }"
+    x-init="$nextTick(() => { open = $el.dataset.active === 'true' ? true : open })"
+    class="relative flex w-full min-w-0 flex-col p-2 rounded-md data-[active=true]:bg-accent"
+    style="padding-left: 8px;"
+    data-required-link=""
+    data-active-link=""
+>
+    
+        <div
+            @click=""
+            class="ring-sidebar-ring flex h-4 shrink-0 items-center justify-between rounded-md px-2 text-xs font-medium text-muted-foreground cursor-pointer select-none"
+        >
+            <span>Advanced</span>
+
+            
+        </div>
+    
+
+    
+    
+    
+        
+        
+        
+            
+        
+        
+        
+    
+        
+        
+        
+            
+        
+        
+        
+    
+        
+        
+        
+            
+        
+        
+        
+    
+    
+    
+
+    <div x-show="open" x-collapse>
+        <ul class="flex flex-col">
+            
+            
+            <div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
+                <div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm">
+                    <ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-0.5">
+                        
+                            
+                            
+<li
+    data-slot="sidebar-menu-item"
+    data-required-link=""
     data-sidebar="menu-item"
     class="group/menu-item relative h-[30px]">
     <a
@@ -2997,17 +4301,17 @@
                             
 <li
     data-slot="sidebar-menu-item"
-    data-required-link="^\/(0\.2\.1.*)$"
+    data-required-link=""
     data-sidebar="menu-item"
     class="group/menu-item relative h-[30px]">
     <a
         data-slot="sidebar-menu-button"
         data-active-link=""
         data-sidebar="menu-button"
-        data-size="default" href="/0.2.1/advanced/debugging-and-performance/"
+        data-size="default" href="/master/advanced/env-variable/"
         class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
         
-        Debugging & Performance
+        Env variable
         
 
         
@@ -3023,7 +4327,7 @@
                             
 <li
     data-slot="sidebar-menu-item"
-    data-required-link="^\/(?!0\.2\.1(?:\/|$)).*$(master(?:\/.*)?|.*)$"
+    data-required-link=""
     data-sidebar="menu-item"
     class="group/menu-item relative h-[30px]">
     <a
@@ -3033,7 +4337,7 @@
         data-size="default" href="/master/advanced/debugging-and-performance/"
         class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
         
-        Debugging & Performance
+        Debug & Performance
         
 
         
@@ -3071,10 +4375,397 @@
 
 
 
+
+
+
 <div 
     x-data="{ open: true }"
     x-init="$nextTick(() => { open = $el.dataset.active === 'true' ? true : open })"
     class="relative flex w-full min-w-0 flex-col p-2 rounded-md data-[active=true]:bg-accent"
+    style="padding-left: 8px;"
+    data-required-link=""
+    data-active-link=""
+>
+    
+        <div
+            @click=""
+            class="ring-sidebar-ring flex h-4 shrink-0 items-center justify-between rounded-md px-2 text-xs font-medium text-muted-foreground cursor-pointer select-none"
+        >
+            <span>Tutorials</span>
+
+            
+        </div>
+    
+
+    
+    
+    
+        
+        
+        
+            
+        
+        
+        
+    
+        
+        
+        
+            
+        
+        
+        
+    
+        
+        
+        
+            
+        
+        
+        
+    
+        
+        
+        
+            
+        
+        
+        
+    
+        
+        
+        
+            
+        
+        
+        
+    
+        
+        
+        
+            
+        
+        
+        
+    
+        
+        
+        
+            
+        
+        
+        
+    
+        
+        
+        
+            
+        
+        
+        
+    
+    
+    
+
+    <div x-show="open" x-collapse>
+        <ul class="flex flex-col">
+            
+            
+            <div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
+                <div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm">
+                    <ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-0.5">
+                        
+                            
+                            
+<li
+    data-slot="sidebar-menu-item"
+    data-required-link=""
+    data-sidebar="menu-item"
+    class="group/menu-item relative h-[30px]">
+    <a
+        data-slot="sidebar-menu-button"
+        data-active-link=""
+        data-sidebar="menu-button"
+        data-size="default" href="/master/tutorials/simple-bar/"
+        class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
+        
+        Simple Bar
+        
+
+        
+
+        
+
+        
+    </a>
+</li>
+                            
+                        
+                            
+                            
+<li
+    data-slot="sidebar-menu-item"
+    data-required-link=""
+    data-sidebar="menu-item"
+    class="group/menu-item relative h-[30px]">
+    <a
+        data-slot="sidebar-menu-button"
+        data-active-link=""
+        data-sidebar="menu-button"
+        data-size="default" href="/master/tutorials/config/"
+        class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
+        
+        Config
+        
+
+        
+
+        
+        
+        
+<span class="flex size-2 rounded-full bg-warning" title="New"></span>
+
+        
+        
+
+        
+    </a>
+</li>
+                            
+                        
+                            
+                            
+<li
+    data-slot="sidebar-menu-item"
+    data-required-link=""
+    data-sidebar="menu-item"
+    class="group/menu-item relative h-[30px]">
+    <a
+        data-slot="sidebar-menu-button"
+        data-active-link=""
+        data-sidebar="menu-button"
+        data-size="default" href="/master/tutorials/lockscreen/"
+        class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
+        
+        Lockscreen
+        
+
+        
+
+        
+        
+        
+<span class="flex size-2 rounded-full bg-warning" title="New"></span>
+
+        
+        
+
+        
+    </a>
+</li>
+                            
+                        
+                            
+                            
+<li
+    data-slot="sidebar-menu-item"
+    data-required-link=""
+    data-sidebar="menu-item"
+    class="group/menu-item relative h-[30px]">
+    <a
+        data-slot="sidebar-menu-button"
+        data-active-link=""
+        data-sidebar="menu-button"
+        data-size="default" href="/master/tutorials/bluetooth/"
+        class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
+        
+        Bluetooth
+        
+
+        
+
+        
+        
+        
+<span class="flex size-2 rounded-full bg-warning" title="New"></span>
+
+        
+        
+
+        
+    </a>
+</li>
+                            
+                        
+                            
+                            
+<li
+    data-slot="sidebar-menu-item"
+    data-required-link=""
+    data-sidebar="menu-item"
+    class="group/menu-item relative h-[30px]">
+    <a
+        data-slot="sidebar-menu-button"
+        data-active-link=""
+        data-sidebar="menu-button"
+        data-size="default" href="/master/tutorials/display-manager/"
+        class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
+        
+        Display manager
+        
+
+        
+
+        
+        
+        
+<span class="flex size-2 rounded-full bg-warning" title="New"></span>
+
+        
+        
+
+        
+    </a>
+</li>
+                            
+                        
+                            
+                            
+<li
+    data-slot="sidebar-menu-item"
+    data-required-link=""
+    data-sidebar="menu-item"
+    class="group/menu-item relative h-[30px]">
+    <a
+        data-slot="sidebar-menu-button"
+        data-active-link=""
+        data-sidebar="menu-button"
+        data-size="default" href="/master/tutorials/notifications/"
+        class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
+        
+        Notifications
+        
+
+        
+
+        
+        
+        
+<span class="flex size-2 rounded-full bg-warning" title="New"></span>
+
+        
+        
+
+        
+    </a>
+</li>
+                            
+                        
+                            
+                            
+<li
+    data-slot="sidebar-menu-item"
+    data-required-link=""
+    data-sidebar="menu-item"
+    class="group/menu-item relative h-[30px]">
+    <a
+        data-slot="sidebar-menu-button"
+        data-active-link=""
+        data-sidebar="menu-button"
+        data-size="default" href="/master/tutorials/wallpaper/"
+        class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
+        
+        Wallpaper
+        
+
+        
+
+        
+        
+        
+<span class="flex size-2 rounded-full bg-warning" title="New"></span>
+
+        
+        
+
+        
+    </a>
+</li>
+                            
+                        
+                            
+                            
+<li
+    data-slot="sidebar-menu-item"
+    data-required-link=""
+    data-sidebar="menu-item"
+    class="group/menu-item relative h-[30px]">
+    <a
+        data-slot="sidebar-menu-button"
+        data-active-link=""
+        data-sidebar="menu-button"
+        data-size="default" href="/master/tutorials/wifi/"
+        class="hpeer/menu-button flex items-center gap-2 rounded-md p-2 m-0 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
+        
+        Wifi
+        
+
+        
+
+        
+        
+        
+<span class="flex size-2 rounded-full bg-warning" title="New"></span>
+
+        
+        
+
+        
+    </a>
+</li>
+                            
+                        
+
+                    </ul>
+                </div>
+            </div>
+            
+            
+            
+        </ul>
+    </div>
+</div>
+                
+            
+        </ul>
+    </div>
+</div>
+                
+            
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+
+
+
+
+
+    
+
+
+<div 
+    x-data="{ open: true }"
+    x-init="$nextTick(() => { open = $el.dataset.active === 'true' ? true : open })"
+    class="relative flex w-full min-w-0 flex-col p-2 rounded-md data-[active=true]:bg-accent"
+    style="padding-left: 0px;"
     data-required-link=""
     data-active-link="$"
 >
@@ -3186,7 +4877,7 @@
         <div class="flex h-(--footer-height) items-center justify-between">
             <div class="text-muted-foreground w-full text-center text-xs leading-loose sm:text-sm">
                 
-                Built by<!-- --> <span>Quickguide</span> &mdash;
+                Built by<!-- --> Quickguide &mdash;
                 
                 <a href="https://github.com/asiffer/mkdocs-shadcn">UI</a> provided by
                 <a href="https://github.com/asiffer">@asiffer</a>
